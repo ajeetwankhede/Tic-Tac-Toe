@@ -20,7 +20,7 @@
 
 /**
  *  @copyright MIT License 2019 Ajeet Wankhede
- *  @file    main.cpp
+ *  @file    RandomPlayer_test.cpp
  *  @author  Ajeet Wankhede
  *  @date    06/11/2019
  *  @version 1.0
@@ -28,13 +28,33 @@
  *  @brief Coding challenge by Plus One Robotics
  *
  *  @section DESCRIPTION
- *  This is the main file for test.
- *  Tests are initialized and RUN_ALL_TESTES() is called
+ *  This is a RandomPlayer class test file.
+ *  Test cases are written to ensure the implementation is correct. All test cases must pass.
+ *  If any test case fails, please correct the corresponding function definition.
  */
 
+#include "RandomPlayer.hpp"
 #include <gtest/gtest.h>
+#include <vector>
 
-int main(int argc, char** argv) {
-  ::testing::InitGoogleTest(&argc, argv);
-  return RUN_ALL_TESTS();
+/**
+ * @brief Test case for input function.
+ */
+TEST(RandomPlayer, inputTest) {
+  // Create an object of class RandomPlayer
+  RandomPlayer RandomPlayerTestObject;
+  // Add valid moves
+  RandomPlayerTestObject.validMoves = {1, 2, 4, 6, 3, 7};
+  // Call the input function to randomly select a move
+  int move = RandomPlayerTestObject.input();
+  // Check if the selected move lie within the validMoves
+  bool valid = false;
+  for (auto i : RandomPlayerTestObject.validMoves) {
+    if (i == move) {
+      valid = true;
+      break;
+    }
+  }
+  // Expect the move is chosen from the validMoves
+  EXPECT_TRUE(valid);
 }

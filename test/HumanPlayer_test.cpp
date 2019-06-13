@@ -20,7 +20,7 @@
 
 /**
  *  @copyright MIT License 2019 Ajeet Wankhede
- *  @file    main.cpp
+ *  @file    HumanPlayer_test.cpp
  *  @author  Ajeet Wankhede
  *  @date    06/11/2019
  *  @version 1.0
@@ -28,13 +28,10 @@
  *  @brief Coding challenge by Plus One Robotics
  *
  *  @section DESCRIPTION
- *  This is the main file for test.
- *  Tests are initialized and RUN_ALL_TESTES() is called
+ *  This is a HumanPlayer class test file.
+ *  Test cases are written to ensure the implementation is correct. All test cases must pass.
+ *  If any test case fails, please correct the corresponding function definition.
  */
 
+#include "HumanPlayer.hpp"
 #include <gtest/gtest.h>
-
-int main(int argc, char** argv) {
-  ::testing::InitGoogleTest(&argc, argv);
-  return RUN_ALL_TESTS();
-}
