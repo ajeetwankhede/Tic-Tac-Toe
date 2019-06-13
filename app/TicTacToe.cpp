@@ -20,7 +20,7 @@
 
 /**
  *  @copyright MIT License 2019 Ajeet Wankhede
- *  @file    main.cpp
+ *  @file    TicTacToe.cpp
  *  @author  Ajeet Wankhede
  *  @date    06/11/2019
  *  @version 1.0
@@ -28,13 +28,38 @@
  *  @brief Coding challenge by Plus One Robotics
  *
  *  @section DESCRIPTION
- *  This is the main file.
- *  Object of class TicTacToe is created and startGame() is called.
+ *  This is a TicTacToe class source file.
+ *  This class is used to initialize the board and start the game.
+ *  Also, the type of player is selected here.
+ *  The total number of games are counted.
  */
 
-#include <iostream>
+#include "TicTacToe.hpp"
 
+TicTacToe::TicTacToe() {
+  // TODO(Ajeet): Auto-generated constructor stub
+}
 
-int main() {
-    return 0;
+TicTacToe::~TicTacToe() {
+  // TODO(Ajeet): Auto-generated destructor stub
+}
+
+void TicTacToe::togglePlayer() {
+  // TODO(Ajeet): Toggle the current status of player
+}
+
+bool TicTacToe::continueGame() {
+  // TODO(Ajeet): Count the number of games and
+  // return false if count = 9 else true
+  return true;
+}
+
+void TicTacToe::startGame() {
+  // TODO(Ajeet):
+  // 1. Draw the board
+  // 2. Start the while loop for the game
+  // 3. Input from player
+  // 4. Validity check
+  // 5. Update the board
+  // 6. Win / Draw check
 }

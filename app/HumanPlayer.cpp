@@ -20,7 +20,7 @@
 
 /**
  *  @copyright MIT License 2019 Ajeet Wankhede
- *  @file    main.cpp
+ *  @file    HumanPlayer.cpp
  *  @author  Ajeet Wankhede
  *  @date    06/11/2019
  *  @version 1.0
@@ -28,13 +28,35 @@
  *  @brief Coding challenge by Plus One Robotics
  *
  *  @section DESCRIPTION
- *  This is the main file.
- *  Object of class TicTacToe is created and startGame() is called.
+ *  This is a HumanPlayer class source file.
+ *  This class is be used to input a move by human.
+ *  The name of the player is also stored.
  */
 
-#include <iostream>
+#include "HumanPlayer.hpp"
+#include <string>
 
+using std::string;
 
-int main() {
-    return 0;
+HumanPlayer::HumanPlayer() {
+  // TODO(Ajeet): Auto-generated constructor stub
+}
+
+HumanPlayer::~HumanPlayer() {
+  // TODO(Ajeet): Auto-generated destructor stub
+}
+
+int HumanPlayer::input() {
+  // TODO(Ajeet): Ask the user for a move
+  return 0;
+}
+
+void HumanPlayer::setName(const string& s) {
+  // Store the name of the player
+  name = s;
+}
+
+string HumanPlayer::getName() {
+  // Return the name of the player
+  return name;
 }

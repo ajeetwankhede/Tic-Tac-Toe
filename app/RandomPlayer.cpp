@@ -20,7 +20,7 @@
 
 /**
  *  @copyright MIT License 2019 Ajeet Wankhede
- *  @file    main.cpp
+ *  @file    RandomPlayer.cpp
  *  @author  Ajeet Wankhede
  *  @date    06/11/2019
  *  @version 1.0
@@ -28,13 +28,21 @@
  *  @brief Coding challenge by Plus One Robotics
  *
  *  @section DESCRIPTION
- *  This is the main file.
- *  Object of class TicTacToe is created and startGame() is called.
+ *  This is a RandomPlayer class source file.
+ *  This class is be used to input a move randomly.
  */
 
-#include <iostream>
+#include "RandomPlayer.hpp"
 
+RandomPlayer::RandomPlayer() {
+  // TODO(Ajeet): Auto-generated constructor stub
+}
 
-int main() {
-    return 0;
+RandomPlayer::~RandomPlayer() {
+  // TODO(Ajeet): Auto-generated destructor stub
+}
+
+int RandomPlayer::input() {
+  // TODO(Ajeet): Generate a random moves from the valid moves
+  return 0;
 }

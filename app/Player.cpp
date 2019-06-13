@@ -20,7 +20,7 @@
 
 /**
  *  @copyright MIT License 2019 Ajeet Wankhede
- *  @file    main.cpp
+ *  @file    Player.cpp
  *  @author  Ajeet Wankhede
  *  @date    06/11/2019
  *  @version 1.0
@@ -28,13 +28,27 @@
  *  @brief Coding challenge by Plus One Robotics
  *
  *  @section DESCRIPTION
- *  This is the main file.
- *  Object of class TicTacToe is created and startGame() is called.
+ *  This is a Player class source file.
+ *  This class is be used find the valid moves in the game.
+ *  These will be helpful for the players to choose a valid move.
  */
 
-#include <iostream>
+#include "Player.hpp"
 
+Player::Player() {
+  // TODO(Ajeet): Auto-generated constructor stub
+}
 
-int main() {
-    return 0;
+Player::~Player() {
+  // TODO(Ajeet): Auto-generated destructor stub
+}
+
+void Player::findValidMoves(char board[9]) {
+  // TODO(Ajeet): Find the moves which are left to be played and
+  // store the positions in validMoves
+}
+
+bool Player::checkMove(int pos) {
+  // TODO(Ajeet): Validate the move for the player
+  return false;
 }
