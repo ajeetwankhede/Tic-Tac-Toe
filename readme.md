@@ -7,22 +7,26 @@
 
 The task is to build a Tic Tac Toe game using object oriented programming concepts.
 
-# Breif about Tic Tac Toe ([wikipedia](https://en.wikipedia.org/wiki/Tic-tac-toe))
+## Breif about Tic Tac Toe ([wikipedia](https://en.wikipedia.org/wiki/Tic-tac-toe))
 
 Tic-tac-toe (American English), noughts and crosses (British English), or Xs and Os is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.
 
-# Software design
+<p align="center">
+<img src="/images/Tic-tac-toe.png">
+</p>
+
+## Software design
 
 1. UML diagram:
 
 <p align="center">
-<img src="/UML/initial/Class dependency chart - Tic-Tac-Toe.png">
+<img src="/UML/Initial/Class dependency chart - Tic-Tac-Toe.png">
 </p>
 
 2. Activity diagram:
 
 <p align="center">
-<img src="/UML/initial/Activity diagram - Tic-Tac-Toe.png">
+<img src="/UML/Initial/Activity diagram - Tic-Tac-Toe.png">
 </p>
 
 ## Link for SIP document
