@@ -20,13 +20,13 @@ Tic-tac-toe (American English), noughts and crosses (British English), or Xs and
 1. UML diagram:
 
 <p align="center">
-<img src="/UML/Initial/Class dependency chart - Tic-Tac-Toe.png">
+<img src="/UML/final/Class dependency chart - Tic-Tac-Toe.png">
 </p>
 
 2. Activity diagram:
 
 <p align="center">
-<img src="/UML/Initial/Activity diagram - Tic_Tac_Toe.png">
+<img src="/UML/final/Activity diagram - Tic_Tac_Toe.png">
 </p>
 
 ## Link for SIP document
@@ -59,6 +59,10 @@ make
 make code_coverage
 ```
 This generates a index.html page in the build/coverage sub-directory that can be viewed locally in a web browser.
+Below is a screenshot of code coverage report:
+<p align="center">
+<img src="/images/codecoverage.png">
+</p>
 
 ## How to generate Doxygen report
 
@@ -70,12 +74,12 @@ cd Doxygen
 doxygen -g <config_file_name>
 gedit <config_file_name>
 ```
-Update PROJECT_NAME and INPUT fields in the configuration file.
+Update PROJECT_NAME, PROJECT_BRIEF, and INPUT fields in the configuration file.
 Then run the following command to generate the documentations.
 ```
 doxygen <config_file_name>
 ```
-In Doxygen folder, config file and genertaed reports are saved as html and latex format in Doxygen directory.
+In doxygen folder, config file (tictactoe) and genertaed reports are saved as html and latex format.
 
 ## Tools for static code analysis
 
