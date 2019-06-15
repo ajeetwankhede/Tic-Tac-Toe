@@ -38,8 +38,10 @@
 #include <vector>
 #include <string>
 #include <memory>
+#include <sstream>
 
 std::shared_ptr<Player> PlayerTestObject;
+using std::string;
 
 /**
  * @brief Test case for findValidMoves function.
@@ -48,13 +50,13 @@ TEST(Player, findValidMovesTest) {
   // Assign value to the shared pointer to the object
   PlayerTestObject = std::make_shared<Player>();
   // Write possible states of the board
-  char board[9] = { ' ', ' ', 't', 't', ' ', 't', ' ', ' ', 't' };
+  string board = "  tt t  t";
   // Find the valid moves
   PlayerTestObject->findValidMoves(board);
   // Verify the valid moves
   bool valid = true;
   for (auto i : PlayerTestObject->validMoves) {
-    if (board[i] != ' ') {
+    if (board[i - 1] != ' ') {
       valid = false;
       break;
     }
@@ -64,17 +66,67 @@ TEST(Player, findValidMovesTest) {
 }
 
 /**
+ * @brief Test case for displayValidMoves function.
+ */
+TEST(Player, displayValidMovesTest1) {
+  // Assign value to the shared pointer to the object
+  PlayerTestObject = std::make_shared<Player>();
+  std::stringstream ss;
+  PlayerTestObject->validMoves.push_back(1);
+  ss << "Moves remaining: 1" << std::endl;
+  EXPECT_EQ(ss.str(), PlayerTestObject->displayValidMoves());
+}
+
+/**
+ * @brief Test case for displayValidMoves function.
+ */
+TEST(Player, displayValidMovesTest2) {
+  // Assign value to the shared pointer to the object
+  PlayerTestObject = std::make_shared<Player>();
+  std::stringstream ss;
+  PlayerTestObject->validMoves.clear();
+  ss << "No moves left." << std::endl;
+  EXPECT_EQ(ss.str(), PlayerTestObject->displayValidMoves());
+}
+
+/**
  * @brief Test case for checkMove function.
  */
-TEST(Player, checkMoveTest) {
+TEST(Player, checkMoveTest1) {
   // Assign value to the shared pointer to the object
   PlayerTestObject = std::make_shared<Player>();
   // Assign a state to the board
-  char board[9] = { ' ', ' ', 't', 't', ' ', 't', ' ', ' ', 't' };
-  snprintf(PlayerTestObject->currentBoard,
-                   sizeof(PlayerTestObject->currentBoard), "%s\n", board);
-  // Expect pos 1 to be valid
-  EXPECT_TRUE(PlayerTestObject->checkMove(1));
-  // Expect pos 3 to be invalid
-  EXPECT_TRUE(PlayerTestObject->checkMove(3));
+  string board = "  tt t  t";
+  PlayerTestObject->currentBoard = board;
+  for (int i = 1; i <= 9; i++) {
+    if (board[i - 1] == ' ') {
+      // Expect pos to be valid
+      EXPECT_TRUE(PlayerTestObject->checkMove(i));
+    } else {
+      // Expect pos to be invalid
+      EXPECT_FALSE(PlayerTestObject->checkMove(i));
+    }
+  }
+}
+
+/**
+ * @brief Test case for checkMove function.
+ */
+TEST(Player, checkMoveTest2) {
+  // Assign value to the shared pointer to the object
+  PlayerTestObject = std::make_shared<Player>();
+  // Assign a state to the board
+  string board = "  tt t  t";
+  PlayerTestObject->currentBoard = board;
+  // Expect pos to be invalid
+  EXPECT_FALSE(PlayerTestObject->checkMove(10));
+}
+
+/**
+ * @brief Test case for checkMove function.
+ */
+TEST(Player, inputTest) {
+  // Assign value to the shared pointer to the object
+  PlayerTestObject = std::make_shared<Player>();
+  EXPECT_TRUE(PlayerTestObject->input());
 }

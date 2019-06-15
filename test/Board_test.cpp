@@ -36,8 +36,12 @@
 #include "Board.hpp"
 #include <gtest/gtest.h>
 #include <memory>
+#include <string>
+#include <sstream>
 
 std::shared_ptr<Board> BoardTestObject;
+using std::string;
+using std::endl;
 
 /**
  * @brief Test case for clearBoard function.
@@ -48,15 +52,30 @@ TEST(Board, clearBoardTest) {
   // Call the clearBoard function
   BoardTestObject->clearBoard();
   // Verify whether all cells of board are blank
-  bool empty = true;
-  for (int i = 0; i < 9; i++) {
-    if (BoardTestObject->getBoard(i) != ' ') {
-      empty = false;
-      break;
+  string e(9, ' ');
+  EXPECT_EQ(e, BoardTestObject->getEBoard());
+}
+
+/**
+ * @brief Test case for drawBoard function.
+ */
+TEST(Board, drawBoardTest) {
+  // Assign value to the shared pointer to the object
+  BoardTestObject = std::make_shared<Board>();
+  string e(9, ' ');
+  BoardTestObject->setBoard(e);
+  std::stringstream ss;
+  ss << endl;
+  for (int i = 1; i <= 9; i = i + 3) {
+    ss << " " << BoardTestObject->getBoard(i) << " | "
+       << BoardTestObject->getBoard(i + 1) << " " << " | "
+       << BoardTestObject->getBoard(i + 2) << endl;
+    if (i < 5) {
+      ss << "------------" << endl;
     }
   }
-  // Expect true if all cells are blank
-  EXPECT_TRUE(empty);
+  ss << endl;
+  EXPECT_EQ(ss.str(), BoardTestObject->drawBoard());
 }
 
 /**
@@ -66,23 +85,18 @@ TEST(Board, updateBoardTest) {
   // Assign value to the shared pointer to the object
   BoardTestObject = std::make_shared<Board>();
   // Make all the cells of board blank
-  const char board[9] = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' };
+  string board(9, ' ');
   BoardTestObject->setBoard(board);
   // Assign a character to the maker
   BoardTestObject->setMarker('t');
   // Iterate over each position on the board
-  bool update = true;
   for (int i = 1; i <= 9; i++) {
     // Call the updateBoard function
     BoardTestObject->updateBoard(i);
-    // Verify if marker is set correctly
-    if (BoardTestObject->getBoard(i - 1) != 't') {
-      update = false;
-      break;
-    }
   }
-  // Expect true if all cells are updated correctly
-  EXPECT_TRUE(update);
+  // Verify if marker is set correctly
+  string out(9, 't');
+  EXPECT_EQ(out, BoardTestObject->getEBoard());
 }
 
 /**
@@ -113,8 +127,29 @@ TEST(Board, isWinTest1) {
   BoardTestObject = std::make_shared<Board>();
   // Write all the winning states of the board and check is win
   BoardTestObject->setMarker('t');
-  const char board[9] = { 't', 't', 't', ' ', ' ', ' ', ' ', ' ', ' ' };
-  BoardTestObject->setBoard(board);
+  // Row 1
+  BoardTestObject->setBoard("ttt      ");
+  EXPECT_TRUE(BoardTestObject->isWin());
+  // Row 2
+  BoardTestObject->setBoard("   ttt   ");
+  EXPECT_TRUE(BoardTestObject->isWin());
+  // Row 3
+  BoardTestObject->setBoard("      ttt");
+  EXPECT_TRUE(BoardTestObject->isWin());
+  // Column 1
+  BoardTestObject->setBoard("t  t  t  ");
+  EXPECT_TRUE(BoardTestObject->isWin());
+  // Column 2
+  BoardTestObject->setBoard(" t  t  t ");
+  EXPECT_TRUE(BoardTestObject->isWin());
+  // Column 3
+  BoardTestObject->setBoard("  t  t  t");
+  EXPECT_TRUE(BoardTestObject->isWin());
+  // Diagonal
+  BoardTestObject->setBoard("t   t   t");
+  EXPECT_TRUE(BoardTestObject->isWin());
+  // Anti-diagonal
+  BoardTestObject->setBoard("  t t t  ");
   EXPECT_TRUE(BoardTestObject->isWin());
 }
 
@@ -126,85 +161,7 @@ TEST(Board, isWinTest2) {
   BoardTestObject = std::make_shared<Board>();
   // Write all the winning states of the board and check is win
   BoardTestObject->setMarker('t');
-  const char board[9] = { ' ', ' ', ' ', 't', 't', 't', ' ', ' ', ' ' };
-  BoardTestObject->setBoard(board);
-  EXPECT_TRUE(BoardTestObject->isWin());
-}
-
-/**
- * @brief Test case for isWin function
- */
-TEST(Board, isWinTest3) {
-  // Assign value to the shared pointer to the object
-  BoardTestObject = std::make_shared<Board>();
-  // Write all the winning states of the board and check is win
-  BoardTestObject->setMarker('t');
-  const char board[9] = { ' ', ' ', ' ', ' ', ' ', ' ', 't', 't', 't' };
-  BoardTestObject->setBoard(board);
-  EXPECT_TRUE(BoardTestObject->isWin());
-}
-
-/**
- * @brief Test case for isWin function
- */
-TEST(Board, isWinTest4) {
-  // Assign value to the shared pointer to the object
-  BoardTestObject = std::make_shared<Board>();
-  // Write all the winning states of the board and check is win
-  BoardTestObject->setMarker('t');
-  const char board[9] = { 't', ' ', ' ', 't', ' ', ' ', 't', ' ', ' ' };
-  BoardTestObject->setBoard(board);
-  EXPECT_TRUE(BoardTestObject->isWin());
-}
-
-/**
- * @brief Test case for isWin function
- */
-TEST(Board, isWinTest5) {
-  // Assign value to the shared pointer to the object
-  BoardTestObject = std::make_shared<Board>();
-  // Write all the winning states of the board and check is win
-  BoardTestObject->setMarker('t');
-  const char board[9] = { ' ', 't', ' ', ' ', 't', ' ', ' ', 't', ' ' };
-  BoardTestObject->setBoard(board);
-  EXPECT_TRUE(BoardTestObject->isWin());
-}
-
-/**
- * @brief Test case for isWin function
- */
-TEST(Board, isWinTest6) {
-  // Assign value to the shared pointer to the object
-  BoardTestObject = std::make_shared<Board>();
-  // Write all the winning states of the board and check is win
-  BoardTestObject->setMarker('t');
-  const char board[9] = { ' ', ' ', 't', ' ', ' ', 't', ' ', ' ', 't' };
-  BoardTestObject->setBoard(board);
-  EXPECT_TRUE(BoardTestObject->isWin());
-}
-
-/**
- * @brief Test case for isWin function
- */
-TEST(Board, isWinTest7) {
-  // Assign value to the shared pointer to the object
-  BoardTestObject = std::make_shared<Board>();
-  // Write all the winning states of the board and check is win
-  BoardTestObject->setMarker('t');
-  const char board[9] = { 't', ' ', ' ', ' ', 't', ' ', ' ', ' ', 't' };
-  BoardTestObject->setBoard(board);
-  EXPECT_TRUE(BoardTestObject->isWin());
-}
-
-/**
- * @brief Test case for isWin function
- */
-TEST(Board, isWinTest8) {
-  // Assign value to the shared pointer to the object
-  BoardTestObject = std::make_shared<Board>();
-  // Write all the winning states of the board and check is win
-  BoardTestObject->setMarker('t');
-  const char board[9] = { ' ', ' ', 't', ' ', 't', ' ', 't', ' ', ' ' };
-  BoardTestObject->setBoard(board);
-  EXPECT_TRUE(BoardTestObject->isWin());
+  const string board = "    t t  ";
+  BoardTestObject->setBoard("    t t  ");
+  EXPECT_FALSE(BoardTestObject->isWin());
 }
