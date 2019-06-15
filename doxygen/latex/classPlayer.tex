@@ -1,0 +1,196 @@
+\hypertarget{classPlayer}{}\section{Player Class Reference}
+\label{classPlayer}\index{Player@{Player}}
+Inheritance diagram for Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classPlayer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayer_affe0cc3cb714f6deb4e62f0c0d3f1fd8}{Player}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \mbox{\hyperlink{classPlayer}{Player}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classPlayer_a749d2c00e1fe0f5c2746f7505a58c062}{$\sim$\+Player}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor for \mbox{\hyperlink{classPlayer}{Player}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayer_affad011a9ad4f41e3ee316bb0be47d10}{find\+Valid\+Moves}} (std\+::string board)
+\begin{DoxyCompactList}\small\item\em Finds the moves available for the player. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classPlayer_a00b37112d7ee56c91a0219dcacaece68}{display\+Valid\+Moves}} ()
+\begin{DoxyCompactList}\small\item\em Prints the moves available for the player. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPlayer_a304c0a31df5ccf7acbdb2a2381facbb5}{check\+Move}} (int pos)
+\begin{DoxyCompactList}\small\item\em Validates the move for the player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayer_af832a5f872ae4975563c3c5519320361}{set\+Name}} (std\+::string s)
+\begin{DoxyCompactList}\small\item\em Set the name of the player. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classPlayer_af9a6045fa96f736664c4eab4caa5e8e5}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Get the name of the player. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classPlayer_a3e7c5ce7c59c8b5cc9d0b985a1baae91}{input}} ()
+\begin{DoxyCompactList}\small\item\em Chooses a position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPlayer_ad0068d87dfc2815e83095346c2818861}\label{classPlayer_ad0068d87dfc2815e83095346c2818861}} 
+std\+::string {\bfseries current\+Board}
+\item 
+\mbox{\Hypertarget{classPlayer_a03462bb888096d385a2fe41f1d55669d}\label{classPlayer_a03462bb888096d385a2fe41f1d55669d}} 
+std\+::vector$<$ int $>$ {\bfseries valid\+Moves}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPlayer_affe0cc3cb714f6deb4e62f0c0d3f1fd8}\label{classPlayer_affe0cc3cb714f6deb4e62f0c0d3f1fd8}} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\subsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for \mbox{\hyperlink{classPlayer}{Player}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPlayer_a749d2c00e1fe0f5c2746f7505a58c062}\label{classPlayer_a749d2c00e1fe0f5c2746f7505a58c062}} 
+\index{Player@{Player}!````~Player@{$\sim$\+Player}}
+\index{````~Player@{$\sim$\+Player}!Player@{Player}}
+\subsubsection{\texorpdfstring{$\sim$\+Player()}{~Player()}}
+{\footnotesize\ttfamily Player\+::$\sim$\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Default destructor for \mbox{\hyperlink{classPlayer}{Player}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPlayer_a304c0a31df5ccf7acbdb2a2381facbb5}\label{classPlayer_a304c0a31df5ccf7acbdb2a2381facbb5}} 
+\index{Player@{Player}!check\+Move@{check\+Move}}
+\index{check\+Move@{check\+Move}!Player@{Player}}
+\subsubsection{\texorpdfstring{check\+Move()}{checkMove()}}
+{\footnotesize\ttfamily bool Player\+::check\+Move (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Validates the move for the player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & value of position. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool value, returns true if valid move else false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPlayer_a00b37112d7ee56c91a0219dcacaece68}\label{classPlayer_a00b37112d7ee56c91a0219dcacaece68}} 
+\index{Player@{Player}!display\+Valid\+Moves@{display\+Valid\+Moves}}
+\index{display\+Valid\+Moves@{display\+Valid\+Moves}!Player@{Player}}
+\subsubsection{\texorpdfstring{display\+Valid\+Moves()}{displayValidMoves()}}
+{\footnotesize\ttfamily string Player\+::display\+Valid\+Moves (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints the moves available for the player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string value of valid moves if any 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPlayer_affad011a9ad4f41e3ee316bb0be47d10}\label{classPlayer_affad011a9ad4f41e3ee316bb0be47d10}} 
+\index{Player@{Player}!find\+Valid\+Moves@{find\+Valid\+Moves}}
+\index{find\+Valid\+Moves@{find\+Valid\+Moves}!Player@{Player}}
+\subsubsection{\texorpdfstring{find\+Valid\+Moves()}{findValidMoves()}}
+{\footnotesize\ttfamily void Player\+::find\+Valid\+Moves (\begin{DoxyParamCaption}\item[{std\+::string}]{board }\end{DoxyParamCaption})}
+
+
+
+Finds the moves available for the player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & of 3x3 stating the current board values. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPlayer_af9a6045fa96f736664c4eab4caa5e8e5}\label{classPlayer_af9a6045fa96f736664c4eab4caa5e8e5}} 
+\index{Player@{Player}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Player@{Player}}
+\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
+{\footnotesize\ttfamily string Player\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the name of the player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string value of name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPlayer_a3e7c5ce7c59c8b5cc9d0b985a1baae91}\label{classPlayer_a3e7c5ce7c59c8b5cc9d0b985a1baae91}} 
+\index{Player@{Player}!input@{input}}
+\index{input@{input}!Player@{Player}}
+\subsubsection{\texorpdfstring{input()}{input()}}
+{\footnotesize\ttfamily int Player\+::input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Chooses a position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int value of the chosen position. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classHumanPlayer_a8281fe260b25edc4451fd15ae182707f}{Human\+Player}}, and \mbox{\hyperlink{classRandomPlayer_a4b252647e976a08c1717d8db78bec23d}{Random\+Player}}.
+
+\mbox{\Hypertarget{classPlayer_af832a5f872ae4975563c3c5519320361}\label{classPlayer_af832a5f872ae4975563c3c5519320361}} 
+\index{Player@{Player}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!Player@{Player}}
+\subsubsection{\texorpdfstring{set\+Name()}{setName()}}
+{\footnotesize\ttfamily void Player\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{s }\end{DoxyParamCaption})}
+
+
+
+Set the name of the player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & value of name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/ajetwankhede/eclipse-\/workspace/\+Tic-\/\+Tac-\/\+Toe/include/\mbox{\hyperlink{Player_8hpp}{Player.\+hpp}}\item 
+/home/ajetwankhede/eclipse-\/workspace/\+Tic-\/\+Tac-\/\+Toe/app/\mbox{\hyperlink{Player_8cpp}{Player.\+cpp}}\end{DoxyCompactItemize}

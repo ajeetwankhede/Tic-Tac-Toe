@@ -1,0 +1,263 @@
+\hypertarget{classBoard}{}\section{Board Class Reference}
+\label{classBoard}\index{Board@{Board}}
+Inheritance diagram for Board\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBoard}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBoard_a9ee491d4fea680cf69b033374a9fdfcb}{Board}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \mbox{\hyperlink{classBoard}{Board}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classBoard_af73f45730119a1fd8f6670f53f959e68}{$\sim$\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor for \mbox{\hyperlink{classBoard}{Board}}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classBoard_a8fb1cd277d1dd029baeda80ec8e65756}{draw\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Displays the current board on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBoard_a5f148daa03da25d40dff3fc613568d6f}{clear\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Clears all the contents of board and fill it with blanks. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBoard_a44d5f45daeec9a19d48d17aa02601a17}{update\+Board}} (int pos)
+\begin{DoxyCompactList}\small\item\em Fills the position on the board with the marker. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBoard_aca803d96c721292cedaf21b2ac5fb1a8}{toggle\+Marker}} ()
+\begin{DoxyCompactList}\small\item\em Toggles the value in the marker between \textquotesingle{}X\textquotesingle{} \& \textquotesingle{}O\textquotesingle{}. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classBoard_ae59ed3d0322d92f9d9ae3ee6652e7268}{is\+Win}} ()
+\begin{DoxyCompactList}\small\item\em Checks all the conditions of winning the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBoard_a47d1cea73ebf03e59b09d1134348c377}{set\+Board}} (std\+::string b)
+\begin{DoxyCompactList}\small\item\em Set the entire the board. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classBoard_af7e9c87bb428473eb051ca19ee36ca95}{get\+Board}} (const int pos)
+\begin{DoxyCompactList}\small\item\em Get the state of the board. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classBoard_a3707ab499357d887c1be4e2bbb477891}{get\+E\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Get the entire board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBoard_add8b23c5ba550963a8e1641b6df26fa9}{set\+Marker}} (const char c)
+\begin{DoxyCompactList}\small\item\em Set the marker. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classBoard_a735a4eec8098cf419441ebb7e4b4fa16}{get\+Marker}} ()
+\begin{DoxyCompactList}\small\item\em Get the marker. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBoard_a9ee491d4fea680cf69b033374a9fdfcb}\label{classBoard_a9ee491d4fea680cf69b033374a9fdfcb}} 
+\index{Board@{Board}!Board@{Board}}
+\index{Board@{Board}!Board@{Board}}
+\subsubsection{\texorpdfstring{Board()}{Board()}}
+{\footnotesize\ttfamily Board\+::\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor for \mbox{\hyperlink{classBoard}{Board}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBoard_af73f45730119a1fd8f6670f53f959e68}\label{classBoard_af73f45730119a1fd8f6670f53f959e68}} 
+\index{Board@{Board}!````~Board@{$\sim$\+Board}}
+\index{````~Board@{$\sim$\+Board}!Board@{Board}}
+\subsubsection{\texorpdfstring{$\sim$\+Board()}{~Board()}}
+{\footnotesize\ttfamily Board\+::$\sim$\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Default destructor for \mbox{\hyperlink{classBoard}{Board}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classBoard_a5f148daa03da25d40dff3fc613568d6f}\label{classBoard_a5f148daa03da25d40dff3fc613568d6f}} 
+\index{Board@{Board}!clear\+Board@{clear\+Board}}
+\index{clear\+Board@{clear\+Board}!Board@{Board}}
+\subsubsection{\texorpdfstring{clear\+Board()}{clearBoard()}}
+{\footnotesize\ttfamily void Board\+::clear\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears all the contents of board and fill it with blanks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBoard_a8fb1cd277d1dd029baeda80ec8e65756}\label{classBoard_a8fb1cd277d1dd029baeda80ec8e65756}} 
+\index{Board@{Board}!draw\+Board@{draw\+Board}}
+\index{draw\+Board@{draw\+Board}!Board@{Board}}
+\subsubsection{\texorpdfstring{draw\+Board()}{drawBoard()}}
+{\footnotesize\ttfamily string Board\+::draw\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Displays the current board on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string value for printing the board 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBoard_af7e9c87bb428473eb051ca19ee36ca95}\label{classBoard_af7e9c87bb428473eb051ca19ee36ca95}} 
+\index{Board@{Board}!get\+Board@{get\+Board}}
+\index{get\+Board@{get\+Board}!Board@{Board}}
+\subsubsection{\texorpdfstring{get\+Board()}{getBoard()}}
+{\footnotesize\ttfamily char Board\+::get\+Board (\begin{DoxyParamCaption}\item[{const int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Get the state of the board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & value of pos on the board \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char value at pos on the board 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBoard_a3707ab499357d887c1be4e2bbb477891}\label{classBoard_a3707ab499357d887c1be4e2bbb477891}} 
+\index{Board@{Board}!get\+E\+Board@{get\+E\+Board}}
+\index{get\+E\+Board@{get\+E\+Board}!Board@{Board}}
+\subsubsection{\texorpdfstring{get\+E\+Board()}{getEBoard()}}
+{\footnotesize\ttfamily string Board\+::get\+E\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the entire board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string value of the board 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBoard_a735a4eec8098cf419441ebb7e4b4fa16}\label{classBoard_a735a4eec8098cf419441ebb7e4b4fa16}} 
+\index{Board@{Board}!get\+Marker@{get\+Marker}}
+\index{get\+Marker@{get\+Marker}!Board@{Board}}
+\subsubsection{\texorpdfstring{get\+Marker()}{getMarker()}}
+{\footnotesize\ttfamily char Board\+::get\+Marker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the marker. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char value of marker 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBoard_ae59ed3d0322d92f9d9ae3ee6652e7268}\label{classBoard_ae59ed3d0322d92f9d9ae3ee6652e7268}} 
+\index{Board@{Board}!is\+Win@{is\+Win}}
+\index{is\+Win@{is\+Win}!Board@{Board}}
+\subsubsection{\texorpdfstring{is\+Win()}{isWin()}}
+{\footnotesize\ttfamily bool Board\+::is\+Win (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks all the conditions of winning the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool value true if player wins, else returns false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBoard_a47d1cea73ebf03e59b09d1134348c377}\label{classBoard_a47d1cea73ebf03e59b09d1134348c377}} 
+\index{Board@{Board}!set\+Board@{set\+Board}}
+\index{set\+Board@{set\+Board}!Board@{Board}}
+\subsubsection{\texorpdfstring{set\+Board()}{setBoard()}}
+{\footnotesize\ttfamily void Board\+::set\+Board (\begin{DoxyParamCaption}\item[{std\+::string}]{b }\end{DoxyParamCaption})}
+
+
+
+Set the entire the board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & of new board \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBoard_add8b23c5ba550963a8e1641b6df26fa9}\label{classBoard_add8b23c5ba550963a8e1641b6df26fa9}} 
+\index{Board@{Board}!set\+Marker@{set\+Marker}}
+\index{set\+Marker@{set\+Marker}!Board@{Board}}
+\subsubsection{\texorpdfstring{set\+Marker()}{setMarker()}}
+{\footnotesize\ttfamily void Board\+::set\+Marker (\begin{DoxyParamCaption}\item[{const char}]{c }\end{DoxyParamCaption})}
+
+
+
+Set the marker. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char} & value to be set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBoard_aca803d96c721292cedaf21b2ac5fb1a8}\label{classBoard_aca803d96c721292cedaf21b2ac5fb1a8}} 
+\index{Board@{Board}!toggle\+Marker@{toggle\+Marker}}
+\index{toggle\+Marker@{toggle\+Marker}!Board@{Board}}
+\subsubsection{\texorpdfstring{toggle\+Marker()}{toggleMarker()}}
+{\footnotesize\ttfamily void Board\+::toggle\+Marker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Toggles the value in the marker between \textquotesingle{}X\textquotesingle{} \& \textquotesingle{}O\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBoard_a44d5f45daeec9a19d48d17aa02601a17}\label{classBoard_a44d5f45daeec9a19d48d17aa02601a17}} 
+\index{Board@{Board}!update\+Board@{update\+Board}}
+\index{update\+Board@{update\+Board}!Board@{Board}}
+\subsubsection{\texorpdfstring{update\+Board()}{updateBoard()}}
+{\footnotesize\ttfamily void Board\+::update\+Board (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fills the position on the board with the marker. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & value stating the position to fill. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/ajetwankhede/eclipse-\/workspace/\+Tic-\/\+Tac-\/\+Toe/include/\mbox{\hyperlink{Board_8hpp}{Board.\+hpp}}\item 
+/home/ajetwankhede/eclipse-\/workspace/\+Tic-\/\+Tac-\/\+Toe/app/\mbox{\hyperlink{Board_8cpp}{Board.\+cpp}}\end{DoxyCompactItemize}
