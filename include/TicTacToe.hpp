@@ -37,15 +37,23 @@
 #ifndef INCLUDE_TICTACTOE_HPP_
 #define INCLUDE_TICTACTOE_HPP_
 
+#include "Player.hpp"
+#include "Board.hpp"
+#include "HumanPlayer.hpp"
+#include "RandomPlayer.hpp"
+
 class TicTacToe {
  public:
+  int countGames;
   /**
    *   @brief Default constructor for TicTacToe.
    *
    *   @param nothing
    *   @return nothing
    */
-  TicTacToe();
+  TicTacToe()
+      : countGames(0) {
+  }
   /**
    *   @brief Default constructor for TicTacToe.
    *
@@ -56,17 +64,10 @@ class TicTacToe {
   /**
    *   @brief Begins the game loop.
    *
-   *   @param nothing
+   *   @param Board object, Player object pointer, Player object pointer
    *   @return nothing
    */
-  void startGame();
-  /**
-   *   @brief Toggles the value of player between the two selected players ('H', 'R').
-   *
-   *   @param nothing
-   *   @return nothing
-   */
-  void togglePlayer();
+  void startGame(Board *b, Player *p1, Player *p2);
   /**
    *   @brief Tells if game is completed.
    *
@@ -74,9 +75,6 @@ class TicTacToe {
    *   @return bool value, true if continue else false to stop the game
    */
   bool continueGame();
-
-  int countGames;
-  char player;
 };
 
 #endif  // INCLUDE_TICTACTOE_HPP_

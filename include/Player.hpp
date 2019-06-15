@@ -36,9 +36,12 @@
 #ifndef INCLUDE_PLAYER_HPP_
 #define INCLUDE_PLAYER_HPP_
 
-#include<vector>
+#include <vector>
+#include <string>
 
 class Player {
+  std::string name;
+
  public:
   /**
    *   @brief Default constructor for Player.
@@ -57,10 +60,17 @@ class Player {
   /**
    *   @brief Finds the moves available for the player.
    *
-   *   @param char array of 3x3 stating the current board values.
+   *   @param string of 3x3 stating the current board values.
    *   @return nothing
    */
-  void findValidMoves(char board[9]);
+  void findValidMoves(std::string board);
+  /**
+   *   @brief Prints the moves available for the player.
+   *
+   *   @param nothing
+   *   @return string value of valid moves if any
+   */
+  std::string displayValidMoves();
   /**
    *   @brief Validates the move for the player.
    *
@@ -68,8 +78,29 @@ class Player {
    *   @return bool value, returns true if valid move else false
    */
   bool checkMove(int pos);
+  /**
+   *   @brief Set the name of the player
+   *
+   *   @param string value of name
+   *   @return nothing
+   */
+  void setName(std::string s);
+  /**
+   *   @brief Get the name of the player
+   *
+   *   @param nothing
+   *   @return string value of name
+   */
+  std::string getName();
+  /**
+   *   @brief Chooses a position.
+   *
+   *   @param nothing
+   *   @return int value of the chosen position.
+   */
+  virtual int input();
 
-  char currentBoard[9];
+  std::string currentBoard;
   std::vector<int> validMoves;
 };
 

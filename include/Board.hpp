@@ -37,8 +37,10 @@
 #ifndef INCLUDE_BOARD_HPP_
 #define INCLUDE_BOARD_HPP_
 
+#include <string>
+
 class Board {
-  char board[9];
+  std::string board;
   char marker;
 
  public:
@@ -48,7 +50,10 @@ class Board {
    *   @param nothing
    *   @return nothing
    */
-  Board();
+  Board()
+      : board("123456789"),
+        marker('X') {
+  }
   /**
    *   @brief Default destructor for Board.
    *
@@ -60,9 +65,9 @@ class Board {
    *   @brief Displays the current board on the screen.
    *
    *   @param nothing
-   *   @return nothing
+   *   @return string value for printing the board
    */
-  void drawBoard();
+  std::string drawBoard();
   /**
    *   @brief Clears all the contents of board and fill it with blanks.
    *
@@ -76,28 +81,28 @@ class Board {
    *   @param int value stating the position to fill.
    *   @return nothing
    */
-  void updateBoard(int pos);
+  virtual void updateBoard(int pos);
   /**
    *   @brief Toggles the value in the marker between 'X' & 'O'.
    *
    *   @param nothing
    *   @return nothing
    */
-  void toggleMarker();
+  virtual void toggleMarker();
   /**
    *   @brief Checks all the conditions of winning the game.
    *
    *   @param nothing
    *   @return bool value true if player wins, else returns false.
    */
-  bool isWin();
+  virtual bool isWin();
   /**
-   *   @brief Set the state of the board
+   *   @brief Set the entire the board
    *
-   *   @param char array of new board
+   *   @param string of new board
    *   @return nothing
    */
-  void setBoard(const char b[9]);
+  void setBoard(std::string b);
   /**
    *   @brief Get the state of the board
    *
@@ -105,6 +110,13 @@ class Board {
    *   @return char value at pos on the board
    */
   char getBoard(const int pos);
+  /**
+   *   @brief Get the entire board
+   *
+   *   @param nothing
+   *   @return string value of the board
+   */
+  virtual std::string getEBoard();
   /**
    *   @brief Set the marker
    *

@@ -36,12 +36,9 @@
 #ifndef INCLUDE_HUMANPLAYER_HPP_
 #define INCLUDE_HUMANPLAYER_HPP_
 
-#include <string>
 #include "Player.hpp"
 
 class HumanPlayer : public Player {
-  std::string name;
-
  public:
   /**
    *   @brief Default constructor for HumanPlayer.
@@ -64,20 +61,6 @@ class HumanPlayer : public Player {
    *   @return int value of the position on the board.
    */
   int input();
-  /**
-   *   @brief Set the name of the player
-   *
-   *   @param string value of name
-   *   @return nothing
-   */
-  void setName(const std::string& s);
-  /**
-   *   @brief Get the name of the player
-   *
-   *   @param nothing
-   *   @return string value of name
-   */
-  std::string getName();
 };
 
 #endif  // INCLUDE_HUMANPLAYER_HPP_
