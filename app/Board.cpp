@@ -35,47 +35,106 @@
  */
 
 #include "Board.hpp"
+#include <iostream>
+#include <sstream>
+#include <string>
 
-Board::Board() {
-  // TODO(Ajeet): Auto-generated constructor stub
-}
+using std::cout;
+using std::endl;
+using std::string;
 
 Board::~Board() {
-  // TODO(Ajeet): Auto-generated destructor stub
+  // Auto-generated destructor stub
 }
 
-void Board::drawBoard() {
-  // TODO(Ajeet): Print the current status of the board
+string Board::drawBoard() {
+  std::stringstream ss;
+  // Print the current status of the board
+  ss << endl;
+  for (int i = 1; i <= 9; i = i + 3) {
+    ss << " " << getBoard(i) << " | " << getBoard(i + 1) << " " << " | "
+         << getBoard(i + 2) << endl;
+    if (i < 5) {
+      ss << "------------" << endl;
+    }
+  }
+  ss << endl;
+  return ss.str();
 }
 
 void Board::clearBoard() {
-  // TODO(Ajeet): Clear the content of the board
+  // Clear the content of the board
+  string blank(9, ' ');
+  setBoard(blank);
 }
 
 void Board::updateBoard(int pos) {
-  // TODO(Ajeet): Update the board at the position with current marker
+  // Update the board at the position with current marker
+  board[pos - 1] = getMarker();
+  cout << drawBoard();
 }
 
 void Board::toggleMarker() {
-  // TODO(Ajeet): Toggle the value in the marker
+  // Toggle the value in the marker
+  if (getMarker() == 'X') {
+    setMarker('O');
+  } else if (getMarker() == 'O') {
+    setMarker('X');
+  }
 }
 
 bool Board::isWin() {
-  // TODO(Ajeet): Check if current marker is winning and
+  // Check if current marker is winning and
   // return true if win else false
+  if (getBoard(1) == getMarker() && getBoard(1) == getBoard(2)
+      && getBoard(1) == getBoard(3)) {
+    // Row 1
+    return true;
+  } else if (getBoard(4) == getMarker() && getBoard(4) == getBoard(5)
+      && getBoard(4) == getBoard(6)) {
+    // Row 2
+    return true;
+  } else if (getBoard(7) == getMarker() && getBoard(7) == getBoard(8)
+      && getBoard(7) == getBoard(9)) {
+    // Row 3
+    return true;
+  } else if (getBoard(1) == getMarker() && getBoard(1) == getBoard(4)
+      && getBoard(1) == getBoard(7)) {
+    // Column 1
+    return true;
+  } else if (getBoard(2) == getMarker() && getBoard(2) == getBoard(5)
+      && getBoard(2) == getBoard(8)) {
+    // Column 2
+    return true;
+  } else if (getBoard(3) == getMarker() && getBoard(3) == getBoard(6)
+      && getBoard(3) == getBoard(9)) {
+    // Column 3
+    return true;
+  } else if (getBoard(1) == getMarker() && getBoard(1) == getBoard(5)
+      && getBoard(1) == getBoard(9)) {
+    // Diagonal
+    return true;
+  } else if (getBoard(3) == getMarker() && getBoard(3) == getBoard(5)
+      && getBoard(3) == getBoard(7)) {
+    // Anti Diagonal
+    return true;
+  }
   return false;
 }
 
-void Board::setBoard(const char b[9]) {
+void Board::setBoard(string b) {
   // Set the board to new state
-  for (int i = 0; i < 9; i++) {
-    board[i] = b[9];
-  }
+  board = b;
 }
 
 char Board::getBoard(const int pos) {
   // Return the value of the board at pos
-  return board[pos];
+  return board[pos - 1];
+}
+
+string Board::getEBoard() {
+  // Return the the board
+  return board;
 }
 
 void Board::setMarker(const char c) {

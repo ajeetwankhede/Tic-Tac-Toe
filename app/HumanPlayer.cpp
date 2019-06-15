@@ -34,29 +34,24 @@
  */
 
 #include "HumanPlayer.hpp"
-#include <string>
-
-using std::string;
+#include <iostream>
+#include "Player.hpp"
 
 HumanPlayer::HumanPlayer() {
-  // TODO(Ajeet): Auto-generated constructor stub
+  // Auto-generated constructor stub
 }
 
 HumanPlayer::~HumanPlayer() {
-  // TODO(Ajeet): Auto-generated destructor stub
+  // Auto-generated destructor stub
 }
 
 int HumanPlayer::input() {
-  // TODO(Ajeet): Ask the user for a move
-  return 0;
-}
-
-void HumanPlayer::setName(const string& s) {
-  // Store the name of the player
-  name = s;
-}
-
-string HumanPlayer::getName() {
-  // Return the name of the player
-  return name;
+  // Ask the user for a move
+  int pos;
+  std::cout << "Enter your move " << getName() << ": " << std::endl;
+  std::cin >> pos;
+  while (!checkMove(pos)) {
+    std::cin >> pos;
+  }
+  return pos;
 }

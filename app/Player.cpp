@@ -34,21 +34,76 @@
  */
 
 #include "Player.hpp"
+#include <iostream>
+#include <string>
+#include <vector>
+#include <sstream>
+#include <iterator>
+
+using std::cout;
+using std::endl;
+using std::string;
 
 Player::Player() {
-  // TODO(Ajeet): Auto-generated constructor stub
+  // Auto-generated constructor stub
 }
 
 Player::~Player() {
-  // TODO(Ajeet): Auto-generated destructor stub
+  // Auto-generated destructor stub
 }
 
-void Player::findValidMoves(char board[9]) {
-  // TODO(Ajeet): Find the moves which are left to be played and
+void Player::findValidMoves(string board) {
+  // Find the moves which are left to be played and
   // store the positions in validMoves
+  validMoves.clear();
+  currentBoard = board;
+  for (int i = 1; i <= 9; i++) {
+    if (board[i - 1] == ' ') {
+      validMoves.push_back(i);
+    }
+  }
+  cout << displayValidMoves();
+}
+
+string Player::displayValidMoves() {
+  // Print valid moves array with delimiter ','
+  std::stringstream ss;
+  if (!validMoves.empty()) {
+    std::ostringstream oss;
+    ss << "Moves remaining: ";
+    std::copy(validMoves.begin(), validMoves.end() - 1,
+              std::ostream_iterator<int>(oss, ","));
+    oss << validMoves.back();
+    ss << oss.str() << endl;
+  } else {
+    ss << "No moves left." << endl;
+  }
+  return ss.str();
 }
 
 bool Player::checkMove(int pos) {
-  // TODO(Ajeet): Validate the move for the player
-  return false;
+  // Validate the move for the player
+  if (pos < 1 || pos > 9) {
+    cout << "Move should be between 1-9 inclusive." << endl;
+    return false;
+  } else if (currentBoard[pos - 1] != ' ') {
+    cout << "Position already occupied. Enter again." << endl;
+    return false;
+  }
+  return true;
+}
+
+void Player::setName(string s) {
+  // Store the name of the player
+  name = s;
+}
+
+string Player::getName() {
+  // Return the name of the player
+  return name;
+}
+
+int Player::input() {
+  // Return 1. Defined in derived class.
+  return 1;
 }

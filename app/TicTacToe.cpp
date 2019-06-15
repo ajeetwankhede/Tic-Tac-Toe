@@ -35,31 +35,69 @@
  */
 
 #include "TicTacToe.hpp"
+#include <iostream>
+#include <string>
+#include "Board.hpp"
+#include "HumanPlayer.hpp"
+#include "RandomPlayer.hpp"
+#include "Player.hpp"
 
-TicTacToe::TicTacToe() {
-  // TODO(Ajeet): Auto-generated constructor stub
-}
+using std::cout;
+using std::endl;
+using std::cin;
+using std::string;
 
 TicTacToe::~TicTacToe() {
-  // TODO(Ajeet): Auto-generated destructor stub
-}
-
-void TicTacToe::togglePlayer() {
-  // TODO(Ajeet): Toggle the current status of player
+  // Auto-generated destructor stub
 }
 
 bool TicTacToe::continueGame() {
-  // TODO(Ajeet): Count the number of games and
-  // return false if count = 9 else true
+  // Count the number of games and
+  // return false if count == 9 else true
+  if (countGames == 9) {
+    return false;
+  }
   return true;
 }
 
-void TicTacToe::startGame() {
-  // TODO(Ajeet):
-  // 1. Draw the board
-  // 2. Start the while loop for the game
-  // 3. Input from player
-  // 4. Validity check
-  // 5. Update the board
-  // 6. Win / Draw check
+void TicTacToe::startGame(Board *b, Player *p1, Player *p2) {
+  cout << "********" << p1->getName() << " vs " << p2->getName() << "********"
+       << endl;
+  // Start the while loop for the game
+  cout << b->drawBoard();
+  b->clearBoard();
+  while (continueGame()) {
+    // Find & Print the valid moves
+    p1->findValidMoves(b->getEBoard());
+    // Enter move
+    int move;
+    move = p1->input();
+    // Update the board
+    b->updateBoard(move);
+    countGames++;
+    // Check for win
+    if (b->isWin()) {
+      cout << p1->getName() << " wins!" << endl;
+      return;
+    } else if (continueGame()) {
+      // Toggle the marker
+      b->toggleMarker();
+      // Find & Print the valid moves
+      p2->findValidMoves(b->getEBoard());
+      // Enter move
+      move = p2->input();
+      // Update the board
+      b->updateBoard(move);
+      countGames++;
+      // Check for win
+      if (b->isWin()) {
+        cout << p2->getName() << " wins!" << endl;
+        return;
+      }
+      // Toggle the marker
+      b->toggleMarker();
+    }
+  }
+  // Match is a Draw
+  cout << "Match is a draw." << endl;
 }

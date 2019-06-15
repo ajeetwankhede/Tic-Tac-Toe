@@ -33,16 +33,26 @@
  */
 
 #include "RandomPlayer.hpp"
+#include <iostream>
+#include <vector>
+#include <utility>
+#include <random>
 
 RandomPlayer::RandomPlayer() {
-  // TODO(Ajeet): Auto-generated constructor stub
+  // Auto-generated constructor stub
 }
 
 RandomPlayer::~RandomPlayer() {
-  // TODO(Ajeet): Auto-generated destructor stub
+  // Auto-generated destructor stub
 }
 
 int RandomPlayer::input() {
-  // TODO(Ajeet): Generate a random moves from the valid moves
-  return 0;
+  // Generate a random moves from the valid moves
+  std::random_device rd;
+  std::mt19937 rng(rd());
+  std::uniform_int_distribution<> dist(0, validMoves.size() - 1);
+  int index = dist(rng);
+  std::cout << "Move chosen by " << getName() << ": " << validMoves[index]
+            << std::endl;
+  return validMoves[index];
 }
