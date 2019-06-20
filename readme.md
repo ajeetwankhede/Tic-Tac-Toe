@@ -5,28 +5,33 @@
 
 ## Project Overview
 
-The task is to build a Tic Tac Toe game using object oriented programming concepts.
+The task is to build an AI agent to learn to play Tic Tac Toe game and to implement object oriented programming concepts.
 
 ## Breif about Tic Tac Toe ([wikipedia](https://en.wikipedia.org/wiki/Tic-tac-toe))
 
-Tic-tac-toe (American English), noughts and crosses (British English), or Xs and Os is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.
+Tic-tac-toe (American English), noughts and crosses (British English), or Xs and Os is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row first wins the game.
 
 <p align="center">
 <img src="/images/Tic_tac_toe.png">
 </p>
+
+## Breif about AI agent
+
+In this project Q learning is implemented to train an AI agent. A general introduction can be obtained from [Chapter 13](https://www.cs.swarthmore.edu/~meeden/cs63/f11/ml-ch13.pdf) of Machine Learning, Tom Mitchell. The implementation is based on a pseudo code given by Meeden [CS63 Lab 6](https://www.cs.swarthmore.edu/~meeden/cs63/f11/lab6.php). 
+After training the agent for 200,000 self-play games (~1 min), it reaches an optimal policy. The agent learns to choose the center move if vacant leading to either a win or draw game, as seen in [Reinforcement Learning in Tic-Tac-Toe Game and Its Similar Variations](https://www.cs.dartmouth.edu/~lorenzo/teaching/cs134/Archive/Spring2009/final/PengTao/final_report.pdf). When tested against a random player (randomly chooses valid moves) for 1000 games, AI agent either wins (~99%) or draws (~1%) the game but never loses.
 
 ## Software design
 
 1. UML diagram:
 
 <p align="center">
-<img src="/UML/final/Class dependency chart - Tic-Tac-Toe.png">
+<img src="/UML/Sprint-3/Class dependency chart - Tic-Tac-Toe.png">
 </p>
 
 2. Activity diagram:
 
 <p align="center">
-<img src="/UML/final/Activity diagram - Tic_Tac_Toe.png">
+<img src="/UML/Sprint-3/Activity diagram - Tic_Tac_Toe.png">
 </p>
 
 ## Link for SIP document
