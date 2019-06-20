@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['_7eboard',['~Board',['../classBoard.html#af73f45730119a1fd8f6670f53f959e68',1,'Board']]],
-  ['_7ehumanplayer',['~HumanPlayer',['../classHumanPlayer.html#abdeb9d120fc74c8d82ec0c688883f16f',1,'HumanPlayer']]],
-  ['_7eplayer',['~Player',['../classPlayer.html#a749d2c00e1fe0f5c2746f7505a58c062',1,'Player']]],
-  ['_7erandomplayer',['~RandomPlayer',['../classRandomPlayer.html#aa0bac4df423cda35cbb4639da37bdaaf',1,'RandomPlayer']]],
-  ['_7etictactoe',['~TicTacToe',['../classTicTacToe.html#a5e9c4ed3279034d5530cc7b94a3e10e5',1,'TicTacToe']]]
+  ['random',['random',['../classQLearning.html#adc9c1b48116868a468ec370cc2dc3475',1,'QLearning']]],
+  ['randomplayer',['RandomPlayer',['../classRandomPlayer.html#a966ea01a29775e7eb52ff0fffcd34f12',1,'RandomPlayer']]],
+  ['reinforcement',['reinforcement',['../classQLearning.html#acb9b1ecb8b84f0b8b3cf8acb809fe7c3',1,'QLearning']]]
 ];

@@ -1,0 +1,97 @@
+\hypertarget{QLearning__test_8cpp}{}\section{/home/ajetwankhede/eclipse-\/workspace/\+Tic-\/\+Tac-\/\+Toe/test/\+Q\+Learning\+\_\+test.cpp File Reference}
+\label{QLearning__test_8cpp}\index{/home/ajetwankhede/eclipse-\/workspace/\+Tic-\/\+Tac-\/\+Toe/test/\+Q\+Learning\+\_\+test.\+cpp@{/home/ajetwankhede/eclipse-\/workspace/\+Tic-\/\+Tac-\/\+Toe/test/\+Q\+Learning\+\_\+test.\+cpp}}
+
+
+This is a \mbox{\hyperlink{classQLearning}{Q\+Learning}} class test file. Test cases are written to ensure the implementation is correct. All test cases must pass. If any test case fails, please correct the corresponding function definition.  
+
+
+{\ttfamily \#include \char`\"{}Q\+Learning.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{QLearning__test_8cpp_a50db105558f9bc31bef36ad3ebd2d4b1}\label{QLearning__test_8cpp_a50db105558f9bc31bef36ad3ebd2d4b1}} 
+\mbox{\hyperlink{QLearning__test_8cpp_a50db105558f9bc31bef36ad3ebd2d4b1}{T\+E\+ST}} (\mbox{\hyperlink{classQLearning}{Q\+Learning}}, random\+Test)
+\begin{DoxyCompactList}\small\item\em Test case for random function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{QLearning__test_8cpp_a6bc3fef3d0ab7e7107870af81d02439d}\label{QLearning__test_8cpp_a6bc3fef3d0ab7e7107870af81d02439d}} 
+\mbox{\hyperlink{QLearning__test_8cpp_a6bc3fef3d0ab7e7107870af81d02439d}{T\+E\+ST}} (\mbox{\hyperlink{classQLearning}{Q\+Learning}}, find\+Valid\+Moves\+Test)
+\begin{DoxyCompactList}\small\item\em Test case for find\+Valid\+Moves function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{QLearning__test_8cpp_ac819290257a421041d31892c1a123479}\label{QLearning__test_8cpp_ac819290257a421041d31892c1a123479}} 
+\mbox{\hyperlink{QLearning__test_8cpp_ac819290257a421041d31892c1a123479}{T\+E\+ST}} (\mbox{\hyperlink{classQLearning}{Q\+Learning}}, add\+Key\+Test)
+\begin{DoxyCompactList}\small\item\em Test case for add\+Key function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{QLearning__test_8cpp_a1ae9eaf3b18409286f8262839201bd21}\label{QLearning__test_8cpp_a1ae9eaf3b18409286f8262839201bd21}} 
+\mbox{\hyperlink{QLearning__test_8cpp_a1ae9eaf3b18409286f8262839201bd21}{T\+E\+ST}} (\mbox{\hyperlink{classQLearning}{Q\+Learning}}, choose\+Action\+Test1)
+\begin{DoxyCompactList}\small\item\em Test case for choose\+Action function for marker \textquotesingle{}X\textquotesingle{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{QLearning__test_8cpp_ae2bd7500335170e54ad54306a7c98121}\label{QLearning__test_8cpp_ae2bd7500335170e54ad54306a7c98121}} 
+\mbox{\hyperlink{QLearning__test_8cpp_ae2bd7500335170e54ad54306a7c98121}{T\+E\+ST}} (\mbox{\hyperlink{classQLearning}{Q\+Learning}}, choose\+Action\+Test2)
+\begin{DoxyCompactList}\small\item\em Test case for choose\+Action function for marker \textquotesingle{}O\textquotesingle{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{QLearning__test_8cpp_ab71f2eea5bed6ac4f5c15766718a1b92}\label{QLearning__test_8cpp_ab71f2eea5bed6ac4f5c15766718a1b92}} 
+\mbox{\hyperlink{QLearning__test_8cpp_ab71f2eea5bed6ac4f5c15766718a1b92}{T\+E\+ST}} (\mbox{\hyperlink{classQLearning}{Q\+Learning}}, choose\+Action\+Test3)
+\begin{DoxyCompactList}\small\item\em Test case for choose\+Action function for epsilon = 1. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{QLearning__test_8cpp_aaada60fc2b365ea94f6ffe36d7a56f93}\label{QLearning__test_8cpp_aaada60fc2b365ea94f6ffe36d7a56f93}} 
+\mbox{\hyperlink{QLearning__test_8cpp_aaada60fc2b365ea94f6ffe36d7a56f93}{T\+E\+ST}} (\mbox{\hyperlink{classQLearning}{Q\+Learning}}, lowest\+Qvalue\+Action\+Test1)
+\begin{DoxyCompactList}\small\item\em Test case for lowest\+Qvalue\+Action function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{QLearning__test_8cpp_ace58d5b02f3165c6f5b0e9e207070d6d}\label{QLearning__test_8cpp_ace58d5b02f3165c6f5b0e9e207070d6d}} 
+\mbox{\hyperlink{QLearning__test_8cpp_ace58d5b02f3165c6f5b0e9e207070d6d}{T\+E\+ST}} (\mbox{\hyperlink{classQLearning}{Q\+Learning}}, lowest\+Qvalue\+Action\+Test2)
+\begin{DoxyCompactList}\small\item\em Test case for lowest\+Qvalue\+Action function (Repeating values). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{QLearning__test_8cpp_a5465495dc07ddb8ff2600360fb4db953}\label{QLearning__test_8cpp_a5465495dc07ddb8ff2600360fb4db953}} 
+\mbox{\hyperlink{QLearning__test_8cpp_a5465495dc07ddb8ff2600360fb4db953}{T\+E\+ST}} (\mbox{\hyperlink{classQLearning}{Q\+Learning}}, highest\+Qvalue\+Action\+Test1)
+\begin{DoxyCompactList}\small\item\em Test case for highest\+Qvalue\+Action function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{QLearning__test_8cpp_a39bc97ff65a48df6f9a4311924eabb0d}\label{QLearning__test_8cpp_a39bc97ff65a48df6f9a4311924eabb0d}} 
+\mbox{\hyperlink{QLearning__test_8cpp_a39bc97ff65a48df6f9a4311924eabb0d}{T\+E\+ST}} (\mbox{\hyperlink{classQLearning}{Q\+Learning}}, highest\+Qvalue\+Action\+Test2)
+\begin{DoxyCompactList}\small\item\em Test case for highest\+Qvalue\+Action function (Repeating values). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{QLearning__test_8cpp_ae4f20b797a2a55284ec450bc6c2ef9ff}\label{QLearning__test_8cpp_ae4f20b797a2a55284ec450bc6c2ef9ff}} 
+\mbox{\hyperlink{QLearning__test_8cpp_ae4f20b797a2a55284ec450bc6c2ef9ff}{T\+E\+ST}} (\mbox{\hyperlink{classQLearning}{Q\+Learning}}, reinforcement\+Test)
+\begin{DoxyCompactList}\small\item\em Test case for reinforcement function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{QLearning__test_8cpp_a469c2249b41c18a9d20294c58ff1a507}\label{QLearning__test_8cpp_a469c2249b41c18a9d20294c58ff1a507}} 
+\mbox{\hyperlink{QLearning__test_8cpp_a469c2249b41c18a9d20294c58ff1a507}{T\+E\+ST}} (\mbox{\hyperlink{classQLearning}{Q\+Learning}}, lowest\+Qvalue\+Test)
+\begin{DoxyCompactList}\small\item\em Test case for lowest\+Qvalue function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{QLearning__test_8cpp_a723f2d8e8d3bee9173cb1414c63adfa6}\label{QLearning__test_8cpp_a723f2d8e8d3bee9173cb1414c63adfa6}} 
+\mbox{\hyperlink{QLearning__test_8cpp_a723f2d8e8d3bee9173cb1414c63adfa6}{T\+E\+ST}} (\mbox{\hyperlink{classQLearning}{Q\+Learning}}, highest\+Qvalue\+Test)
+\begin{DoxyCompactList}\small\item\em Test case for highest\+Qvalue function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{QLearning__test_8cpp_a11e44505eeadbd7503eb54427c9a5b00}\label{QLearning__test_8cpp_a11e44505eeadbd7503eb54427c9a5b00}} 
+\mbox{\hyperlink{QLearning__test_8cpp_a11e44505eeadbd7503eb54427c9a5b00}{T\+E\+ST}} (\mbox{\hyperlink{classQLearning}{Q\+Learning}}, update\+Qvalues\+Test1)
+\begin{DoxyCompactList}\small\item\em Test case for update\+Qvalues function. (game over) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{QLearning__test_8cpp_ace9fe3f4b88ed9b539371ebec1b08a07}\label{QLearning__test_8cpp_ace9fe3f4b88ed9b539371ebec1b08a07}} 
+\mbox{\hyperlink{QLearning__test_8cpp_ace9fe3f4b88ed9b539371ebec1b08a07}{T\+E\+ST}} (\mbox{\hyperlink{classQLearning}{Q\+Learning}}, update\+Qvalues\+Test2)
+\begin{DoxyCompactList}\small\item\em Test case for update\+Qvalues function. (game not over) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{QLearning__test_8cpp_a696d240a1e8a2c52ff5d998d237150df}\label{QLearning__test_8cpp_a696d240a1e8a2c52ff5d998d237150df}} 
+\mbox{\hyperlink{QLearning__test_8cpp_a696d240a1e8a2c52ff5d998d237150df}{T\+E\+ST}} (\mbox{\hyperlink{classQLearning}{Q\+Learning}}, update\+Qvalues\+Test3)
+\begin{DoxyCompactList}\small\item\em Test case for update\+Qvalues function. (game not over) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{QLearning__test_8cpp_a888ec42f878db569d52acd52c11b2504}\label{QLearning__test_8cpp_a888ec42f878db569d52acd52c11b2504}} 
+\mbox{\hyperlink{QLearning__test_8cpp_a888ec42f878db569d52acd52c11b2504}{T\+E\+ST}} (\mbox{\hyperlink{classQLearning}{Q\+Learning}}, train\+Test)
+\begin{DoxyCompactList}\small\item\em Test case for train function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{QLearning__test_8cpp_ae569051ce2004cc6ee115c10d26bd058}\label{QLearning__test_8cpp_ae569051ce2004cc6ee115c10d26bd058}} 
+\mbox{\hyperlink{QLearning__test_8cpp_ae569051ce2004cc6ee115c10d26bd058}{T\+E\+ST}} (\mbox{\hyperlink{classQLearning}{Q\+Learning}}, save\+Q\+Table\+Test)
+\begin{DoxyCompactList}\small\item\em Test case for save\+Q\+Table function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{QLearning__test_8cpp_ab85f0fd55eb9f67562339d3fd1a0dd37}\label{QLearning__test_8cpp_ab85f0fd55eb9f67562339d3fd1a0dd37}} 
+\mbox{\hyperlink{QLearning__test_8cpp_ab85f0fd55eb9f67562339d3fd1a0dd37}{T\+E\+ST}} (\mbox{\hyperlink{classQLearning}{Q\+Learning}}, load\+Qtable\+Test)
+\begin{DoxyCompactList}\small\item\em Test case for load\+Qtable function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{QLearning__test_8cpp_aae93dac2323635b256c2dc669544139b}\label{QLearning__test_8cpp_aae93dac2323635b256c2dc669544139b}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classQLearning}{Q\+Learning}} $>$ \mbox{\hyperlink{QLearning__test_8cpp_aae93dac2323635b256c2dc669544139b}{Q\+Learning\+Test\+Object}}
+\begin{DoxyCompactList}\small\item\em Shared pointer object of this class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is a \mbox{\hyperlink{classQLearning}{Q\+Learning}} class test file. Test cases are written to ensure the implementation is correct. All test cases must pass. If any test case fails, please correct the corresponding function definition. 
+
+\begin{DoxyCopyright}{Copyright}
+M\+IT License 2019 Ajeet Wankhede
+\end{DoxyCopyright}
+\begin{DoxyAuthor}{Author}
+Ajeet Wankhede 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+06/11/2019 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}

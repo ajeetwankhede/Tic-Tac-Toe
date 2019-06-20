@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['input',['input',['../classHumanPlayer.html#a8281fe260b25edc4451fd15ae182707f',1,'HumanPlayer::input()'],['../classPlayer.html#a3e7c5ce7c59c8b5cc9d0b985a1baae91',1,'Player::input()'],['../classRandomPlayer.html#a4b252647e976a08c1717d8db78bec23d',1,'RandomPlayer::input()']]],
-  ['iswin',['isWin',['../classBoard.html#ae59ed3d0322d92f9d9ae3ee6652e7268',1,'Board']]]
+  ['highestqvalue',['highestQvalue',['../classQLearning.html#a0e5da71daa52de437939616fe539b2ba',1,'QLearning']]],
+  ['highestqvalueaction',['highestQvalueAction',['../classQLearning.html#a5bf153ecf20717e883b780204e045a09',1,'QLearning']]],
+  ['humanplayer',['HumanPlayer',['../classHumanPlayer.html',1,'HumanPlayer'],['../classHumanPlayer.html#a1cae7389c9855d4ec4e8f69cbe37e372',1,'HumanPlayer::HumanPlayer()']]],
+  ['humanplayer_2ecpp',['HumanPlayer.cpp',['../HumanPlayer_8cpp.html',1,'']]],
+  ['humanplayer_2ehpp',['HumanPlayer.hpp',['../HumanPlayer_8hpp.html',1,'']]],
+  ['humanplayer_5ftest_2ecpp',['HumanPlayer_test.cpp',['../HumanPlayer__test_8cpp.html',1,'']]]
 ];

@@ -71,24 +71,26 @@ $(function() {
 </div>
 </a> </p><hr/>
 <h2>Project Overview</h2>
-<p class="">The task is to build a Tic Tac Toe game using object oriented programming concepts.</p>
+<p class="">The task is to build an AI agent to learn to play Tic Tac Toe game and to implement object oriented programming concepts.</p>
 <h2>Breif about Tic Tac Toe (<a href="https://en.wikipedia.org/wiki/Tic-tac-toe">wikipedia</a>)</h2>
-<p class="">Tic-tac-toe (American English), noughts and crosses (British English), or Xs and Os is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.</p>
+<p class="">Tic-tac-toe (American English), noughts and crosses (British English), or Xs and Os is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row first wins the game.</p>
 <div class="image">
 <img src="/images/Tic_tac_toe.png" alt=""/>
 </div>
- <h2>Software design</h2>
+ <h2>Breif about AI agent</h2>
+<p class="">In this project Q learning is implemented to train an AI agent. A general introduction can be obtained from <a href="https://www.cs.swarthmore.edu/~meeden/cs63/f11/ml-ch13.pdf">Chapter 13</a> of Machine Learning, Tom Mitchell. The implementation is based on a pseudo code given by Meeden <a href="https://www.cs.swarthmore.edu/~meeden/cs63/f11/lab6.php">CS63 Lab 6</a>. After training the agent for 200,000 self-play games (~1 min), it reaches an optimal policy. The agent learns to choose the center move if vacant leading to either a win or draw game, as seen in <a href="https://www.cs.dartmouth.edu/~lorenzo/teaching/cs134/Archive/Spring2009/final/PengTao/final_report.pdf">Reinforcement Learning in Tic-Tac-Toe Game and Its Similar Variations</a>. When tested against a random player (randomly chooses valid moves) for 1000 games, AI agent either wins (~99%) or draws (~1%) the game but never loses.</p>
+<h2>Software design</h2>
 <ol type="1">
 <li>UML diagram:</li>
 </ol>
 <div class="image">
-<img src="/UML/final/Class dependency chart - Tic-Tac-Toe.png" alt=""/>
+<img src="/UML/Sprint-3/Class dependency chart - Tic-Tac-Toe.png" alt=""/>
 </div>
  <ol type="1">
 <li>Activity diagram:</li>
 </ol>
 <div class="image">
-<img src="/UML/final/Activity diagram - Tic_Tac_Toe.png" alt=""/>
+<img src="/UML/Sprint-3/Activity diagram - Tic_Tac_Toe.png" alt=""/>
 </div>
  <h2>Link for SIP document</h2>
 <p class=""><a href="https://docs.google.com/spreadsheets/d/1osaNjtBZ5rFgGtWi5gnai63RkGZE8U25gTj9zXKbLFg/edit#gid=0">SIP Enactment Sheet</a></p>

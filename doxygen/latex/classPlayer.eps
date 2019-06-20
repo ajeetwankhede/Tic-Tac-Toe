@@ -5,7 +5,7 @@
 %%For: 
 %Magnification: 1.00
 %%Orientation: Portrait
-%%BoundingBox: 0 0 500 225.563910
+%%BoundingBox: 0 0 500 150.375940
 %%Pages: 0
 %%BeginSetup
 %%EndSetup
@@ -19,13 +19,13 @@
 /marginwidth 10 def
 /distx 20 def
 /disty 40 def
-/boundaspect 2.216667 def  % aspect ratio of the BoundingBox (width/height)
+/boundaspect 3.325000 def  % aspect ratio of the BoundingBox (width/height)
 /boundx 500 def
 /boundy boundx boundaspect div def
 /xspacing 0 def
 /yspacing 0 def
 /rows 3 def
-/cols 2 def
+/cols 3 def
 /scalefactor 0 def
 /boxfont /Times-Roman findfont fontheight scalefont def
 
@@ -174,8 +174,10 @@
 boxfont setfont
 1 boundaspect scale
 (Player) cw
+(AIPlayer) cw
 (HumanPlayer) cw
 (RandomPlayer) cw
+(MockAIPlayer) cw
 (MockHumanPlayer) cw
 (MockRandomPlayer) cw
 /boxwidth boxwidth marginwidth 2 mul add def
@@ -189,18 +191,20 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (Player) 0.500000 2.000000 box
- (HumanPlayer) 0.000000 1.000000 box
- (RandomPlayer) 1.000000 1.000000 box
- (MockHumanPlayer) 0.000000 0.000000 box
- (MockRandomPlayer) 1.000000 0.000000 box
+ (Player) 1.000000 2.000000 box
+ (AIPlayer) 0.000000 1.000000 box
+ (HumanPlayer) 1.000000 1.000000 box
+ (RandomPlayer) 2.000000 1.000000 box
+ (MockAIPlayer) 0.000000 0.000000 box
+ (MockHumanPlayer) 1.000000 0.000000 box
+ (MockRandomPlayer) 2.000000 0.000000 box
 
 % ----- relations -----
 
 solid
-1 0.500000 1.250000 out
+1 1.000000 1.250000 out
 solid
-0.000000 1.000000 2.000000 conn
+0.000000 2.000000 2.000000 conn
 solid
 0 0.000000 1.750000 in
 solid
@@ -210,6 +214,12 @@ solid
 solid
 1 1.000000 0.250000 out
 solid
+0 2.000000 1.750000 in
+solid
+1 2.000000 0.250000 out
+solid
 0 0.000000 0.750000 in
 solid
 0 1.000000 0.750000 in
+solid
+0 2.000000 0.750000 in

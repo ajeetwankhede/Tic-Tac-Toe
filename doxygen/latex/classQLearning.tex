@@ -1,0 +1,289 @@
+\hypertarget{classQLearning}{}\section{Q\+Learning Class Reference}
+\label{classQLearning}\index{Q\+Learning@{Q\+Learning}}
+Inheritance diagram for Q\+Learning\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classQLearning}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQLearning_a4681fb820e19199c9b7032a3e87ed317}\label{classQLearning_a4681fb820e19199c9b7032a3e87ed317}} 
+\mbox{\hyperlink{classQLearning_a4681fb820e19199c9b7032a3e87ed317}{Q\+Learning}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \mbox{\hyperlink{classQLearning}{Q\+Learning}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classQLearning_aa7babdb90c7f697d1e79eb945c2e43b2}\label{classQLearning_aa7babdb90c7f697d1e79eb945c2e43b2}} 
+virtual \mbox{\hyperlink{classQLearning_aa7babdb90c7f697d1e79eb945c2e43b2}{$\sim$\+Q\+Learning}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \mbox{\hyperlink{classQLearning}{Q\+Learning}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classQLearning_ae4e8de3b783a7f9470c4e00f54700276}\label{classQLearning_ae4e8de3b783a7f9470c4e00f54700276}} 
+void \mbox{\hyperlink{classQLearning_ae4e8de3b783a7f9470c4e00f54700276}{train}} ()
+\begin{DoxyCompactList}\small\item\em Call this function to train the AI agent. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classQLearning_a2f0b606448c0645379158cd5d1077a14}{update\+Qvalues}} (std\+::string state\+Key, int action, std\+::string next\+Key, float reward)
+\begin{DoxyCompactList}\small\item\em The function updates the Q values in the table using Bellman equation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classQLearning_ad87221dd6ac78bca0960e4a367774745}{add\+Key}} (std\+::string state\+Key)
+\begin{DoxyCompactList}\small\item\em Add the given state\+Key in the Q table. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classQLearning_ab3c02f950f417a08a7360779d05145e2}{choose\+Action}} (std\+::string state\+Key)
+\begin{DoxyCompactList}\small\item\em Chooses the action for the player. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classQLearning_acb9b1ecb8b84f0b8b3cf8acb809fe7c3}{reinforcement}} (std\+::string next\+Key)
+\begin{DoxyCompactList}\small\item\em Decides the reward for given state\+Key. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classQLearning_a2ec75be948cae6812f4b752d58cd94c4}{lowest\+Qvalue}} (std\+::string next\+Key)
+\begin{DoxyCompactList}\small\item\em Selects the lowest value for the given key in the Q table. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classQLearning_a0e5da71daa52de437939616fe539b2ba}{highest\+Qvalue}} (std\+::string next\+Key)
+\begin{DoxyCompactList}\small\item\em Selects the highest value for the given key in the Q table. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classQLearning_ae8203d4fe9a77dfa2f0558be42dac02a}\label{classQLearning_ae8203d4fe9a77dfa2f0558be42dac02a}} 
+void \mbox{\hyperlink{classQLearning_ae8203d4fe9a77dfa2f0558be42dac02a}{save\+Q\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Saves the Q table dictionary in a text file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classQLearning_a53aefdab5c6376dc6bc14da2a4d65c4e}{lowest\+Qvalue\+Action}} (std\+::string state\+Key)
+\begin{DoxyCompactList}\small\item\em Selects the action corresponding to lowest value for the given key in the Q table. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classQLearning_a5bf153ecf20717e883b780204e045a09}{highest\+Qvalue\+Action}} (std\+::string state\+Key)
+\begin{DoxyCompactList}\small\item\em Selects the action corresponding to highest value for the given key in the Q table. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classQLearning_aeb4bf82527ce560204a29ff3acf31b87}\label{classQLearning_aeb4bf82527ce560204a29ff3acf31b87}} 
+void \mbox{\hyperlink{classQLearning_aeb4bf82527ce560204a29ff3acf31b87}{load\+Qtable}} ()
+\begin{DoxyCompactList}\small\item\em Loads the Q table from a text file in a dictionary. the given key in the Q table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classQLearning_ae2fc8cc1e5c59d2eea29d2d754e2a61f}{find\+Valid\+Moves}} (std\+::string board)
+\begin{DoxyCompactList}\small\item\em Finds the moves available for the player. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classQLearning_adc9c1b48116868a468ec370cc2dc3475}{random}} (int start, int end)
+\begin{DoxyCompactList}\small\item\em Returns a random number within the given range. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classQLearning_a818c5eab3884a6e8be30d32c5d5305f5}{set\+Epsilon}} (float e)
+\begin{DoxyCompactList}\small\item\em Sets the value of epsilon. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classQLearning_a6946b885339af03e3c36b5e8e57ce617}{set\+Epochs}} (int e)
+\begin{DoxyCompactList}\small\item\em Sets the value of epochs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQLearning_a27b6176321609459df788781231101d5}\label{classQLearning_a27b6176321609459df788781231101d5}} 
+\mbox{\hyperlink{classBoard}{Board}} \mbox{\hyperlink{classQLearning_a27b6176321609459df788781231101d5}{B}}
+\begin{DoxyCompactList}\small\item\em Object of class \mbox{\hyperlink{classBoard}{Board}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classQLearning_a450546979def478cd68a509c0bb0f864}\label{classQLearning_a450546979def478cd68a509c0bb0f864}} 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classQLearning_a450546979def478cd68a509c0bb0f864}{valid\+Moves}}
+\begin{DoxyCompactList}\small\item\em Stores the valid moves. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classQLearning_a2c6388cfcc08157a313a21aa11eea620}\label{classQLearning_a2c6388cfcc08157a313a21aa11eea620}} 
+std\+::map$<$ std\+::string, std\+::map$<$ int, float $>$ $>$ \mbox{\hyperlink{classQLearning_a2c6388cfcc08157a313a21aa11eea620}{table}}
+\begin{DoxyCompactList}\small\item\em Stores the Q table in form of dictionary. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classQLearning_abb393197ddcd0739578d72a10244ed65}\label{classQLearning_abb393197ddcd0739578d72a10244ed65}} 
+int \mbox{\hyperlink{classQLearning_abb393197ddcd0739578d72a10244ed65}{count}}
+\begin{DoxyCompactList}\small\item\em Counts the number of steps taken in a game. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classQLearning_acfd795afa29218157ee8960193c556ff}\label{classQLearning_acfd795afa29218157ee8960193c556ff}} 
+bool \mbox{\hyperlink{classQLearning_acfd795afa29218157ee8960193c556ff}{testing}}
+\begin{DoxyCompactList}\small\item\em true if testing else false \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classQLearning_a096f0c622c3d41270d0291613f9c64b9}\label{classQLearning_a096f0c622c3d41270d0291613f9c64b9}} 
+std\+::string \mbox{\hyperlink{classQLearning_a096f0c622c3d41270d0291613f9c64b9}{location}}
+\begin{DoxyCompactList}\small\item\em Stores the path to save/load Q table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classQLearning_ad87221dd6ac78bca0960e4a367774745}\label{classQLearning_ad87221dd6ac78bca0960e4a367774745}} 
+\index{Q\+Learning@{Q\+Learning}!add\+Key@{add\+Key}}
+\index{add\+Key@{add\+Key}!Q\+Learning@{Q\+Learning}}
+\subsubsection{\texorpdfstring{add\+Key()}{addKey()}}
+{\footnotesize\ttfamily void Q\+Learning\+::add\+Key (\begin{DoxyParamCaption}\item[{std\+::string}]{state\+Key }\end{DoxyParamCaption})}
+
+
+
+Add the given state\+Key in the Q table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state\+Key} & a string (key) to be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classQLearning_ab3c02f950f417a08a7360779d05145e2}\label{classQLearning_ab3c02f950f417a08a7360779d05145e2}} 
+\index{Q\+Learning@{Q\+Learning}!choose\+Action@{choose\+Action}}
+\index{choose\+Action@{choose\+Action}!Q\+Learning@{Q\+Learning}}
+\subsubsection{\texorpdfstring{choose\+Action()}{chooseAction()}}
+{\footnotesize\ttfamily int Q\+Learning\+::choose\+Action (\begin{DoxyParamCaption}\item[{std\+::string}]{state\+Key }\end{DoxyParamCaption})}
+
+
+
+Chooses the action for the player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state\+Key} & a string of current state and marker \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Chosen move 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classQLearning_ae2fc8cc1e5c59d2eea29d2d754e2a61f}\label{classQLearning_ae2fc8cc1e5c59d2eea29d2d754e2a61f}} 
+\index{Q\+Learning@{Q\+Learning}!find\+Valid\+Moves@{find\+Valid\+Moves}}
+\index{find\+Valid\+Moves@{find\+Valid\+Moves}!Q\+Learning@{Q\+Learning}}
+\subsubsection{\texorpdfstring{find\+Valid\+Moves()}{findValidMoves()}}
+{\footnotesize\ttfamily void Q\+Learning\+::find\+Valid\+Moves (\begin{DoxyParamCaption}\item[{std\+::string}]{board }\end{DoxyParamCaption})}
+
+
+
+Finds the moves available for the player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & a string of the board values. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classQLearning_a0e5da71daa52de437939616fe539b2ba}\label{classQLearning_a0e5da71daa52de437939616fe539b2ba}} 
+\index{Q\+Learning@{Q\+Learning}!highest\+Qvalue@{highest\+Qvalue}}
+\index{highest\+Qvalue@{highest\+Qvalue}!Q\+Learning@{Q\+Learning}}
+\subsubsection{\texorpdfstring{highest\+Qvalue()}{highestQvalue()}}
+{\footnotesize\ttfamily float Q\+Learning\+::highest\+Qvalue (\begin{DoxyParamCaption}\item[{std\+::string}]{next\+Key }\end{DoxyParamCaption})}
+
+
+
+Selects the highest value for the given key in the Q table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em next\+Key} & a string of key in the Q table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+highest Q value at next\+Key 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classQLearning_a5bf153ecf20717e883b780204e045a09}\label{classQLearning_a5bf153ecf20717e883b780204e045a09}} 
+\index{Q\+Learning@{Q\+Learning}!highest\+Qvalue\+Action@{highest\+Qvalue\+Action}}
+\index{highest\+Qvalue\+Action@{highest\+Qvalue\+Action}!Q\+Learning@{Q\+Learning}}
+\subsubsection{\texorpdfstring{highest\+Qvalue\+Action()}{highestQvalueAction()}}
+{\footnotesize\ttfamily int Q\+Learning\+::highest\+Qvalue\+Action (\begin{DoxyParamCaption}\item[{std\+::string}]{state\+Key }\end{DoxyParamCaption})}
+
+
+
+Selects the action corresponding to highest value for the given key in the Q table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state\+Key} & a string of key in the Q table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Action corresponding to highest Q value at state\+Key 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classQLearning_a2ec75be948cae6812f4b752d58cd94c4}\label{classQLearning_a2ec75be948cae6812f4b752d58cd94c4}} 
+\index{Q\+Learning@{Q\+Learning}!lowest\+Qvalue@{lowest\+Qvalue}}
+\index{lowest\+Qvalue@{lowest\+Qvalue}!Q\+Learning@{Q\+Learning}}
+\subsubsection{\texorpdfstring{lowest\+Qvalue()}{lowestQvalue()}}
+{\footnotesize\ttfamily float Q\+Learning\+::lowest\+Qvalue (\begin{DoxyParamCaption}\item[{std\+::string}]{next\+Key }\end{DoxyParamCaption})}
+
+
+
+Selects the lowest value for the given key in the Q table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em next\+Key} & a string of key in the Q table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lowest Q value at next\+Key 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classQLearning_a53aefdab5c6376dc6bc14da2a4d65c4e}\label{classQLearning_a53aefdab5c6376dc6bc14da2a4d65c4e}} 
+\index{Q\+Learning@{Q\+Learning}!lowest\+Qvalue\+Action@{lowest\+Qvalue\+Action}}
+\index{lowest\+Qvalue\+Action@{lowest\+Qvalue\+Action}!Q\+Learning@{Q\+Learning}}
+\subsubsection{\texorpdfstring{lowest\+Qvalue\+Action()}{lowestQvalueAction()}}
+{\footnotesize\ttfamily int Q\+Learning\+::lowest\+Qvalue\+Action (\begin{DoxyParamCaption}\item[{std\+::string}]{state\+Key }\end{DoxyParamCaption})}
+
+
+
+Selects the action corresponding to lowest value for the given key in the Q table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state\+Key} & a string of key in the Q table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Action corresponding to lowest Q value at state\+Key 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classQLearning_adc9c1b48116868a468ec370cc2dc3475}\label{classQLearning_adc9c1b48116868a468ec370cc2dc3475}} 
+\index{Q\+Learning@{Q\+Learning}!random@{random}}
+\index{random@{random}!Q\+Learning@{Q\+Learning}}
+\subsubsection{\texorpdfstring{random()}{random()}}
+{\footnotesize\ttfamily int Q\+Learning\+::random (\begin{DoxyParamCaption}\item[{int}]{start,  }\item[{int}]{end }\end{DoxyParamCaption})}
+
+
+
+Returns a random number within the given range. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & an integer stating start of the range \\
+\hline
+{\em end} & an integer stating end of the range \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The generated random number 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classQLearning_acb9b1ecb8b84f0b8b3cf8acb809fe7c3}\label{classQLearning_acb9b1ecb8b84f0b8b3cf8acb809fe7c3}} 
+\index{Q\+Learning@{Q\+Learning}!reinforcement@{reinforcement}}
+\index{reinforcement@{reinforcement}!Q\+Learning@{Q\+Learning}}
+\subsubsection{\texorpdfstring{reinforcement()}{reinforcement()}}
+{\footnotesize\ttfamily float Q\+Learning\+::reinforcement (\begin{DoxyParamCaption}\item[{std\+::string}]{next\+Key }\end{DoxyParamCaption})}
+
+
+
+Decides the reward for given state\+Key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em next\+Key} & a string of key in the Q table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reward 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classQLearning_a6946b885339af03e3c36b5e8e57ce617}\label{classQLearning_a6946b885339af03e3c36b5e8e57ce617}} 
+\index{Q\+Learning@{Q\+Learning}!set\+Epochs@{set\+Epochs}}
+\index{set\+Epochs@{set\+Epochs}!Q\+Learning@{Q\+Learning}}
+\subsubsection{\texorpdfstring{set\+Epochs()}{setEpochs()}}
+{\footnotesize\ttfamily void Q\+Learning\+::set\+Epochs (\begin{DoxyParamCaption}\item[{int}]{e }\end{DoxyParamCaption})}
+
+
+
+Sets the value of epochs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & an integer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classQLearning_a818c5eab3884a6e8be30d32c5d5305f5}\label{classQLearning_a818c5eab3884a6e8be30d32c5d5305f5}} 
+\index{Q\+Learning@{Q\+Learning}!set\+Epsilon@{set\+Epsilon}}
+\index{set\+Epsilon@{set\+Epsilon}!Q\+Learning@{Q\+Learning}}
+\subsubsection{\texorpdfstring{set\+Epsilon()}{setEpsilon()}}
+{\footnotesize\ttfamily void Q\+Learning\+::set\+Epsilon (\begin{DoxyParamCaption}\item[{float}]{e }\end{DoxyParamCaption})}
+
+
+
+Sets the value of epsilon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & a float \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classQLearning_a2f0b606448c0645379158cd5d1077a14}\label{classQLearning_a2f0b606448c0645379158cd5d1077a14}} 
+\index{Q\+Learning@{Q\+Learning}!update\+Qvalues@{update\+Qvalues}}
+\index{update\+Qvalues@{update\+Qvalues}!Q\+Learning@{Q\+Learning}}
+\subsubsection{\texorpdfstring{update\+Qvalues()}{updateQvalues()}}
+{\footnotesize\ttfamily void Q\+Learning\+::update\+Qvalues (\begin{DoxyParamCaption}\item[{std\+::string}]{state\+Key,  }\item[{int}]{action,  }\item[{std\+::string}]{next\+Key,  }\item[{float}]{reward }\end{DoxyParamCaption})}
+
+
+
+The function updates the Q values in the table using Bellman equation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state\+Key} & a string of current state \\
+\hline
+{\em action} & an integer of selected action \\
+\hline
+{\em next\+Key} & a string of next state \\
+\hline
+{\em reward} & a float specifying the reward for the selected action \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/ajetwankhede/eclipse-\/workspace/\+Tic-\/\+Tac-\/\+Toe/include/\mbox{\hyperlink{QLearning_8hpp}{Q\+Learning.\+hpp}}\item 
+/home/ajetwankhede/eclipse-\/workspace/\+Tic-\/\+Tac-\/\+Toe/app/\mbox{\hyperlink{QLearning_8cpp}{Q\+Learning.\+cpp}}\end{DoxyCompactItemize}

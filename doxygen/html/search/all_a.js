@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['setboard',['setBoard',['../classBoard.html#a47d1cea73ebf03e59b09d1134348c377',1,'Board']]],
-  ['setmarker',['setMarker',['../classBoard.html#add8b23c5ba550963a8e1641b6df26fa9',1,'Board']]],
-  ['setname',['setName',['../classPlayer.html#af832a5f872ae4975563c3c5519320361',1,'Player']]],
-  ['startgame',['startGame',['../classTicTacToe.html#afe9570245c1c941777a7bd367ee10e61',1,'TicTacToe']]]
+  ['player',['Player',['../classPlayer.html',1,'Player'],['../classPlayer.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8',1,'Player::Player()'],['../classPlayer.html#ac6c86ccc94d6ba66e72c4746a2b011ac',1,'Player::player()']]],
+  ['player_2ecpp',['Player.cpp',['../Player_8cpp.html',1,'']]],
+  ['player_2ehpp',['Player.hpp',['../Player_8hpp.html',1,'']]],
+  ['player_5ftest_2ecpp',['Player_test.cpp',['../Player__test_8cpp.html',1,'']]],
+  ['playertestobject',['PlayerTestObject',['../Player__test_8cpp.html#a7d7170fdbfe77fb0024e29a78d9de72f',1,'Player_test.cpp']]]
 ];

@@ -76,20 +76,24 @@ Inheritance diagram for Player:</div>
  <div class="center">
   <img src="classPlayer.png" usemap="#Player_map" alt=""/>
   <map id="Player_map" name="Player_map">
-<area href="classHumanPlayer.html" alt="HumanPlayer" shape="rect" coords="0,56,125,80"/>
-<area href="classRandomPlayer.html" alt="RandomPlayer" shape="rect" coords="135,56,260,80"/>
-<area href="classMockHumanPlayer.html" title="Mock class for HumanPlayer." alt="MockHumanPlayer" shape="rect" coords="0,112,125,136"/>
-<area href="classMockRandomPlayer.html" title="Mock class for RandomPlayer." alt="MockRandomPlayer" shape="rect" coords="135,112,260,136"/>
+<area href="classAIPlayer.html" alt="AIPlayer" shape="rect" coords="0,56,125,80"/>
+<area href="classHumanPlayer.html" alt="HumanPlayer" shape="rect" coords="135,56,260,80"/>
+<area href="classRandomPlayer.html" alt="RandomPlayer" shape="rect" coords="270,56,395,80"/>
+<area href="classMockAIPlayer.html" title="Mock class for AIPlayer." alt="MockAIPlayer" shape="rect" coords="0,112,125,136"/>
+<area href="classMockHumanPlayer.html" title="Mock class for HumanPlayer." alt="MockHumanPlayer" shape="rect" coords="135,112,260,136"/>
+<area href="classMockRandomPlayer.html" title="Mock class for RandomPlayer." alt="MockRandomPlayer" shape="rect" coords="270,112,395,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:affe0cc3cb714f6deb4e62f0c0d3f1fd8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8">Player</a> ()</td></tr>
-<tr class="memdesc:affe0cc3cb714f6deb4e62f0c0d3f1fd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for <a class="el" href="classPlayer.html">Player</a>.  <a href="#affe0cc3cb714f6deb4e62f0c0d3f1fd8">More...</a><br /></td></tr>
+<tr class="memitem:affe0cc3cb714f6deb4e62f0c0d3f1fd8"><td class="memItemLeft" align="right" valign="top"><a id="affe0cc3cb714f6deb4e62f0c0d3f1fd8"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8">Player</a> ()</td></tr>
+<tr class="memdesc:affe0cc3cb714f6deb4e62f0c0d3f1fd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for <a class="el" href="classPlayer.html">Player</a>. <br /></td></tr>
 <tr class="separator:affe0cc3cb714f6deb4e62f0c0d3f1fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a749d2c00e1fe0f5c2746f7505a58c062"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#a749d2c00e1fe0f5c2746f7505a58c062">~Player</a> ()</td></tr>
-<tr class="memdesc:a749d2c00e1fe0f5c2746f7505a58c062"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor for <a class="el" href="classPlayer.html">Player</a>.  <a href="#a749d2c00e1fe0f5c2746f7505a58c062">More...</a><br /></td></tr>
+<tr class="memitem:a749d2c00e1fe0f5c2746f7505a58c062"><td class="memItemLeft" align="right" valign="top"><a id="a749d2c00e1fe0f5c2746f7505a58c062"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#a749d2c00e1fe0f5c2746f7505a58c062">~Player</a> ()</td></tr>
+<tr class="memdesc:a749d2c00e1fe0f5c2746f7505a58c062"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor for <a class="el" href="classPlayer.html">Player</a>. <br /></td></tr>
 <tr class="separator:a749d2c00e1fe0f5c2746f7505a58c062"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affad011a9ad4f41e3ee316bb0be47d10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#affad011a9ad4f41e3ee316bb0be47d10">findValidMoves</a> (std::string board)</td></tr>
 <tr class="memdesc:affad011a9ad4f41e3ee316bb0be47d10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the moves available for the player.  <a href="#affad011a9ad4f41e3ee316bb0be47d10">More...</a><br /></td></tr>
@@ -113,73 +117,22 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ad0068d87dfc2815e83095346c2818861"><td class="memItemLeft" align="right" valign="top"><a id="ad0068d87dfc2815e83095346c2818861"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>currentBoard</b></td></tr>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#ad0068d87dfc2815e83095346c2818861">currentBoard</a></td></tr>
+<tr class="memdesc:ad0068d87dfc2815e83095346c2818861"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the state of board. <br /></td></tr>
 <tr class="separator:ad0068d87dfc2815e83095346c2818861"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03462bb888096d385a2fe41f1d55669d"><td class="memItemLeft" align="right" valign="top"><a id="a03462bb888096d385a2fe41f1d55669d"></a>
-std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>validMoves</b></td></tr>
+std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#a03462bb888096d385a2fe41f1d55669d">validMoves</a></td></tr>
+<tr class="memdesc:a03462bb888096d385a2fe41f1d55669d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the valid moves. <br /></td></tr>
 <tr class="separator:a03462bb888096d385a2fe41f1d55669d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6c86ccc94d6ba66e72c4746a2b011ac"><td class="memItemLeft" align="right" valign="top"><a id="ac6c86ccc94d6ba66e72c4746a2b011ac"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#ac6c86ccc94d6ba66e72c4746a2b011ac">player</a></td></tr>
+<tr class="memdesc:ac6c86ccc94d6ba66e72c4746a2b011ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the marker of player. <br /></td></tr>
+<tr class="separator:ac6c86ccc94d6ba66e72c4746a2b011ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbc584e63a1b20690a48e429410e263d"><td class="memItemLeft" align="right" valign="top"><a id="abbc584e63a1b20690a48e429410e263d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#abbc584e63a1b20690a48e429410e263d">testing</a></td></tr>
+<tr class="memdesc:abbc584e63a1b20690a48e429410e263d"><td class="mdescLeft">&#160;</td><td class="mdescRight">true if testing else false <br /></td></tr>
+<tr class="separator:abbc584e63a1b20690a48e429410e263d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="affe0cc3cb714f6deb4e62f0c0d3f1fd8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#affe0cc3cb714f6deb4e62f0c0d3f1fd8">&#9670;&nbsp;</a></span>Player()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Player::Player </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Default constructor for <a class="el" href="classPlayer.html">Player</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">nothing</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>nothing </dd></dl>
-
-</div>
-</div>
-<a id="a749d2c00e1fe0f5c2746f7505a58c062"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a749d2c00e1fe0f5c2746f7505a58c062">&#9670;&nbsp;</a></span>~Player()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Player::~Player </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Default destructor for <a class="el" href="classPlayer.html">Player</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">nothing</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>nothing </dd></dl>
-
-</div>
-</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a304c0a31df5ccf7acbdb2a2381facbb5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a304c0a31df5ccf7acbdb2a2381facbb5">&#9670;&nbsp;</a></span>checkMove()</h2>
@@ -200,11 +153,11 @@ std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>v
 <p>Validates the move for the player. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">int</td><td>value of position. </td></tr>
+    <tr><td class="paramname">pos</td><td>an integer on the board </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>bool value, returns true if valid move else false </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>True if valid move else false </dd></dl>
 
 </div>
 </div>
@@ -224,13 +177,7 @@ std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>v
 </div><div class="memdoc">
 
 <p>Prints the moves available for the player. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">nothing</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>string value of valid moves if any </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>string containing valid moves </dd></dl>
 
 </div>
 </div>
@@ -253,11 +200,10 @@ std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>v
 <p>Finds the moves available for the player. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">string</td><td>of 3x3 stating the current board values. </td></tr>
+    <tr><td class="paramname">board</td><td>a string of current board </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>nothing </dd></dl>
 
 </div>
 </div>
@@ -277,13 +223,7 @@ std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>v
 </div><div class="memdoc">
 
 <p>Get the name of the player. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">nothing</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>string value of name </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Value of name </dd></dl>
 
 </div>
 </div>
@@ -311,15 +251,9 @@ std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>v
 </div><div class="memdoc">
 
 <p>Chooses a position. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">nothing</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>int value of the chosen position. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The chosen position. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classHumanPlayer.html#a8281fe260b25edc4451fd15ae182707f">HumanPlayer</a>, and <a class="el" href="classRandomPlayer.html#a4b252647e976a08c1717d8db78bec23d">RandomPlayer</a>.</p>
+<p>Reimplemented in <a class="el" href="classAIPlayer.html#a4a431bc5cf71781bdd311b08c47d27dc">AIPlayer</a>, <a class="el" href="classHumanPlayer.html#a8281fe260b25edc4451fd15ae182707f">HumanPlayer</a>, and <a class="el" href="classRandomPlayer.html#a4b252647e976a08c1717d8db78bec23d">RandomPlayer</a>.</p>
 
 </div>
 </div>
@@ -342,11 +276,10 @@ std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>v
 <p>Set the name of the player. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">string</td><td>value of name </td></tr>
+    <tr><td class="paramname">s</td><td>a string value of name </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>nothing </dd></dl>
 
 </div>
 </div>

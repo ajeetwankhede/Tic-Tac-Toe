@@ -3,59 +3,36 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{classTicTacToe_a103fe9a5ae41b5ef756e20594a70cb7a}\label{classTicTacToe_a103fe9a5ae41b5ef756e20594a70cb7a}} 
 \mbox{\hyperlink{classTicTacToe_a103fe9a5ae41b5ef756e20594a70cb7a}{Tic\+Tac\+Toe}} ()
 \begin{DoxyCompactList}\small\item\em Default constructor for \mbox{\hyperlink{classTicTacToe}{Tic\+Tac\+Toe}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTicTacToe_a5e9c4ed3279034d5530cc7b94a3e10e5}\label{classTicTacToe_a5e9c4ed3279034d5530cc7b94a3e10e5}} 
 virtual \mbox{\hyperlink{classTicTacToe_a5e9c4ed3279034d5530cc7b94a3e10e5}{$\sim$\+Tic\+Tac\+Toe}} ()
 \begin{DoxyCompactList}\small\item\em Default constructor for \mbox{\hyperlink{classTicTacToe}{Tic\+Tac\+Toe}}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classTicTacToe_afe9570245c1c941777a7bd367ee10e61}{start\+Game}} (\mbox{\hyperlink{classBoard}{Board}} $\ast$b, \mbox{\hyperlink{classPlayer}{Player}} $\ast$p1, \mbox{\hyperlink{classPlayer}{Player}} $\ast$p2)
 \begin{DoxyCompactList}\small\item\em Begins the game loop. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classTicTacToe_a866e38e3280ef65ae6f43473cc4e0532}{continue\+Game}} ()
-\begin{DoxyCompactList}\small\item\em Tells if game is completed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Tells if game is completed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTicTacToe_acf8b3808738ec3ec154f8f75643fbc7c}{test\+Accuracy}} (\mbox{\hyperlink{classBoard}{Board}} $\ast$b, \mbox{\hyperlink{classPlayer}{Player}} $\ast$p1, \mbox{\hyperlink{classPlayer}{Player}} $\ast$p2)
+\begin{DoxyCompactList}\small\item\em Tests the accuracy of the player 1 against player 2. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classTicTacToe_a821713e03bf267232724ecdb5e5d3f3f}\label{classTicTacToe_a821713e03bf267232724ecdb5e5d3f3f}} 
-int {\bfseries count\+Games}
-\end{DoxyCompactItemize}
-
-
-\subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classTicTacToe_a103fe9a5ae41b5ef756e20594a70cb7a}\label{classTicTacToe_a103fe9a5ae41b5ef756e20594a70cb7a}} 
-\index{Tic\+Tac\+Toe@{Tic\+Tac\+Toe}!Tic\+Tac\+Toe@{Tic\+Tac\+Toe}}
-\index{Tic\+Tac\+Toe@{Tic\+Tac\+Toe}!Tic\+Tac\+Toe@{Tic\+Tac\+Toe}}
-\subsubsection{\texorpdfstring{Tic\+Tac\+Toe()}{TicTacToe()}}
-{\footnotesize\ttfamily Tic\+Tac\+Toe\+::\+Tic\+Tac\+Toe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Default constructor for \mbox{\hyperlink{classTicTacToe}{Tic\+Tac\+Toe}}. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em nothing} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-nothing 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classTicTacToe_a5e9c4ed3279034d5530cc7b94a3e10e5}\label{classTicTacToe_a5e9c4ed3279034d5530cc7b94a3e10e5}} 
-\index{Tic\+Tac\+Toe@{Tic\+Tac\+Toe}!````~Tic\+Tac\+Toe@{$\sim$\+Tic\+Tac\+Toe}}
-\index{````~Tic\+Tac\+Toe@{$\sim$\+Tic\+Tac\+Toe}!Tic\+Tac\+Toe@{Tic\+Tac\+Toe}}
-\subsubsection{\texorpdfstring{$\sim$\+Tic\+Tac\+Toe()}{~TicTacToe()}}
-{\footnotesize\ttfamily Tic\+Tac\+Toe\+::$\sim$\+Tic\+Tac\+Toe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-
-
-Default constructor for \mbox{\hyperlink{classTicTacToe}{Tic\+Tac\+Toe}}. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em nothing} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-nothing 
-\end{DoxyReturn}
+int \mbox{\hyperlink{classTicTacToe_a821713e03bf267232724ecdb5e5d3f3f}{count\+Games}}
+\begin{DoxyCompactList}\small\item\em Counts the number of steps taken in a game. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTicTacToe_a025803b36332f9def329d3f4b5de7f47}\label{classTicTacToe_a025803b36332f9def329d3f4b5de7f47}} 
+bool \mbox{\hyperlink{classTicTacToe_a025803b36332f9def329d3f4b5de7f47}{testing}}
+\begin{DoxyCompactList}\small\item\em true if testing else false \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTicTacToe_ac4968fae69b8266f05268adf42e29260}\label{classTicTacToe_ac4968fae69b8266f05268adf42e29260}} 
+int \mbox{\hyperlink{classTicTacToe_ac4968fae69b8266f05268adf42e29260}{win}}
+\begin{DoxyCompactList}\small\item\em Stores the number of wins to find accuracy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTicTacToe_ad9fc2a45279911eb2b4ad010e62b2616}\label{classTicTacToe_ad9fc2a45279911eb2b4ad010e62b2616}} 
+int \mbox{\hyperlink{classTicTacToe_ad9fc2a45279911eb2b4ad010e62b2616}{draw}}
+\begin{DoxyCompactList}\small\item\em Stores the number of draws to find accuracy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTicTacToe_aba1ce3bbe1f2f7cc16f7d2e24789e171}\label{classTicTacToe_aba1ce3bbe1f2f7cc16f7d2e24789e171}} 
+int \mbox{\hyperlink{classTicTacToe_aba1ce3bbe1f2f7cc16f7d2e24789e171}{tests}}
+\begin{DoxyCompactList}\small\item\em Number of games to played for testing. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Member Function Documentation}
@@ -69,13 +46,8 @@ nothing
 
 Tells if game is completed. 
 
-
-\begin{DoxyParams}{Parameters}
-{\em nothing} & \\
-\hline
-\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-bool value, true if continue else false to stop the game 
+True if continue else false to stop the game 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classTicTacToe_afe9570245c1c941777a7bd367ee10e61}\label{classTicTacToe_afe9570245c1c941777a7bd367ee10e61}} 
 \index{Tic\+Tac\+Toe@{Tic\+Tac\+Toe}!start\+Game@{start\+Game}}
@@ -89,12 +61,32 @@ Begins the game loop.
 
 
 \begin{DoxyParams}{Parameters}
-{\em \mbox{\hyperlink{classBoard}{Board}}} & object, \mbox{\hyperlink{classPlayer}{Player}} object pointer, \mbox{\hyperlink{classPlayer}{Player}} object pointer \\
+{\em b} & \mbox{\hyperlink{classBoard}{Board}} object pointer \\
+\hline
+{\em p1} & Player1 object pointer \\
+\hline
+{\em p2} & Player2 object pointer \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-nothing 
-\end{DoxyReturn}
+\mbox{\Hypertarget{classTicTacToe_acf8b3808738ec3ec154f8f75643fbc7c}\label{classTicTacToe_acf8b3808738ec3ec154f8f75643fbc7c}} 
+\index{Tic\+Tac\+Toe@{Tic\+Tac\+Toe}!test\+Accuracy@{test\+Accuracy}}
+\index{test\+Accuracy@{test\+Accuracy}!Tic\+Tac\+Toe@{Tic\+Tac\+Toe}}
+\subsubsection{\texorpdfstring{test\+Accuracy()}{testAccuracy()}}
+{\footnotesize\ttfamily void Tic\+Tac\+Toe\+::test\+Accuracy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBoard}{Board}} $\ast$}]{b,  }\item[{\mbox{\hyperlink{classPlayer}{Player}} $\ast$}]{p1,  }\item[{\mbox{\hyperlink{classPlayer}{Player}} $\ast$}]{p2 }\end{DoxyParamCaption})}
+
+
+
+Tests the accuracy of the player 1 against player 2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & \mbox{\hyperlink{classBoard}{Board}} object pointer \\
+\hline
+{\em p1} & Player1 object pointer \\
+\hline
+{\em p2} & Player2 object pointer \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

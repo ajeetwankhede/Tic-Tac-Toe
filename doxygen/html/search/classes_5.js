@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tictactoe',['TicTacToe',['../classTicTacToe.html',1,'']]]
+  ['qlearning',['QLearning',['../classQLearning.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['randomplayer',['RandomPlayer',['../classRandomPlayer.html',1,'']]]
+  ['player',['Player',['../classPlayer.html',1,'']]]
 ];

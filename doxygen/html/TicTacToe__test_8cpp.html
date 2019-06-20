@@ -75,7 +75,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Coding challenge by Plus One Robotics.  
+<p>This is a <a class="el" href="classTicTacToe.html">TicTacToe</a> class test file. Test cases are written to ensure the implementation is correct. All test cases must pass. If any test case fails, please correct the corresponding function definition.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="TicTacToe_8hpp_source.html">TicTacToe.hpp</a>&quot;</code><br />
 <code>#include &lt;gtest/gtest.h&gt;</code><br />
@@ -86,6 +86,7 @@ $(function() {
 <code>#include &quot;<a class="el" href="Player_8hpp_source.html">Player.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="HumanPlayer_8hpp_source.html">HumanPlayer.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="RandomPlayer_8hpp_source.html">RandomPlayer.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="AIPlayer_8hpp_source.html">AIPlayer.hpp</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -94,6 +95,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMockHumanPlayer.html">MockHumanPlayer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mock class for <a class="el" href="classHumanPlayer.html">HumanPlayer</a>.  <a href="classMockHumanPlayer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMockAIPlayer.html">MockAIPlayer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mock class for <a class="el" href="classAIPlayer.html">AIPlayer</a>.  <a href="classMockAIPlayer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMockBoard.html">MockBoard</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mock class for <a class="el" href="classBoard.html">Board</a>.  <a href="classMockBoard.html#details">More...</a><br /></td></tr>
@@ -129,22 +133,36 @@ Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TicTacToe__test_8cpp.html#ad1ceede656ce5fe580f01a3d7be6e94f">TEST</a> (<a class="el" href="classTicTacToe.html">TicTacToe</a>, startGameTest6)</td></tr>
 <tr class="memdesc:ad1ceede656ce5fe580f01a3d7be6e94f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test case for startGame function. (Human1 vs Human2 - Draw) <br /></td></tr>
 <tr class="separator:ad1ceede656ce5fe580f01a3d7be6e94f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bc8a321e494e0f7022840bf6e45806e"><td class="memItemLeft" align="right" valign="top"><a id="a5bc8a321e494e0f7022840bf6e45806e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TicTacToe__test_8cpp.html#a5bc8a321e494e0f7022840bf6e45806e">TEST</a> (<a class="el" href="classTicTacToe.html">TicTacToe</a>, startGameTest7)</td></tr>
+<tr class="memdesc:a5bc8a321e494e0f7022840bf6e45806e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test case for startGame function. (Human vs AI) <br /></td></tr>
+<tr class="separator:a5bc8a321e494e0f7022840bf6e45806e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dfb6f63a7c777566b3b466779311804"><td class="memItemLeft" align="right" valign="top"><a id="a5dfb6f63a7c777566b3b466779311804"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TicTacToe__test_8cpp.html#a5dfb6f63a7c777566b3b466779311804">TEST</a> (<a class="el" href="classTicTacToe.html">TicTacToe</a>, testAccuracyTest1)</td></tr>
+<tr class="memdesc:a5dfb6f63a7c777566b3b466779311804"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test case for testAccuracy function. (Human vs Human - H1 wins) <br /></td></tr>
+<tr class="separator:a5dfb6f63a7c777566b3b466779311804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae52d8ecc4a4674c90c6ce5f935378f4c"><td class="memItemLeft" align="right" valign="top"><a id="ae52d8ecc4a4674c90c6ce5f935378f4c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TicTacToe__test_8cpp.html#ae52d8ecc4a4674c90c6ce5f935378f4c">TEST</a> (<a class="el" href="classTicTacToe.html">TicTacToe</a>, testAccuracyTest2)</td></tr>
+<tr class="memdesc:ae52d8ecc4a4674c90c6ce5f935378f4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test case for testAccuracy function. (Human1 vs Human2 - Draw) <br /></td></tr>
+<tr class="separator:ae52d8ecc4a4674c90c6ce5f935378f4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6b718182393d40c2adc4dab68c42398"><td class="memItemLeft" align="right" valign="top"><a id="af6b718182393d40c2adc4dab68c42398"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TicTacToe__test_8cpp.html#af6b718182393d40c2adc4dab68c42398">TEST</a> (<a class="el" href="classTicTacToe.html">TicTacToe</a>, testAccuracyTest3)</td></tr>
+<tr class="memdesc:af6b718182393d40c2adc4dab68c42398"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test case for startGame function. (Human1 vs Human2 - H2 win) <br /></td></tr>
+<tr class="separator:af6b718182393d40c2adc4dab68c42398"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a611bdb09ca2e598bd16ca308dd32c524"><td class="memItemLeft" align="right" valign="top"><a id="a611bdb09ca2e598bd16ca308dd32c524"></a>
-std::shared_ptr&lt; <a class="el" href="classTicTacToe.html">TicTacToe</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>TicTacToeTestObject</b></td></tr>
+std::shared_ptr&lt; <a class="el" href="classTicTacToe.html">TicTacToe</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TicTacToe__test_8cpp.html#a611bdb09ca2e598bd16ca308dd32c524">TicTacToeTestObject</a></td></tr>
+<tr class="memdesc:a611bdb09ca2e598bd16ca308dd32c524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared pointer object of this class. <br /></td></tr>
 <tr class="separator:a611bdb09ca2e598bd16ca308dd32c524"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p class="">Coding challenge by Plus One Robotics. </p>
+<div class="textblock"><p class="">This is a <a class="el" href="classTicTacToe.html">TicTacToe</a> class test file. Test cases are written to ensure the implementation is correct. All test cases must pass. If any test case fails, please correct the corresponding function definition. </p>
 <dl class="section copyright"><dt>Copyright</dt><dd>MIT License 2019 Ajeet Wankhede</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Ajeet Wankhede </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>06/11/2019 </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>1.0</dd></dl>
-<h1><a class="anchor" id="DESCRIPTION"></a>
-DESCRIPTION</h1>
-<p class="">This is a <a class="el" href="classTicTacToe.html">TicTacToe</a> class test file. Test cases are written to ensure the implementation is correct. All test cases must pass. If any test case fails, please correct the corresponding function definition. </p>
+<dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -2,7 +2,7 @@
 \label{TicTacToe__test_8cpp}\index{/home/ajetwankhede/eclipse-\/workspace/\+Tic-\/\+Tac-\/\+Toe/test/\+Tic\+Tac\+Toe\+\_\+test.\+cpp@{/home/ajetwankhede/eclipse-\/workspace/\+Tic-\/\+Tac-\/\+Toe/test/\+Tic\+Tac\+Toe\+\_\+test.\+cpp}}
 
 
-Coding challenge by Plus One Robotics.  
+This is a \mbox{\hyperlink{classTicTacToe}{Tic\+Tac\+Toe}} class test file. Test cases are written to ensure the implementation is correct. All test cases must pass. If any test case fails, please correct the corresponding function definition.  
 
 
 {\ttfamily \#include \char`\"{}Tic\+Tac\+Toe.\+hpp\char`\"{}}\newline
@@ -14,6 +14,7 @@ Coding challenge by Plus One Robotics.
 {\ttfamily \#include \char`\"{}Player.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Human\+Player.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Random\+Player.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+I\+Player.\+hpp\char`\"{}}\newline
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -21,6 +22,8 @@ class \mbox{\hyperlink{classMockRandomPlayer}{Mock\+Random\+Player}}
 \begin{DoxyCompactList}\small\item\em Mock class for \mbox{\hyperlink{classRandomPlayer}{Random\+Player}}. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classMockHumanPlayer}{Mock\+Human\+Player}}
 \begin{DoxyCompactList}\small\item\em Mock class for \mbox{\hyperlink{classHumanPlayer}{Human\+Player}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classMockAIPlayer}{Mock\+A\+I\+Player}}
+\begin{DoxyCompactList}\small\item\em Mock class for \mbox{\hyperlink{classAIPlayer}{A\+I\+Player}}. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classMockBoard}{Mock\+Board}}
 \begin{DoxyCompactList}\small\item\em Mock class for \mbox{\hyperlink{classBoard}{Board}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
@@ -46,17 +49,29 @@ class \mbox{\hyperlink{classMockBoard}{Mock\+Board}}
 \begin{DoxyCompactList}\small\item\em Test case for start\+Game function. (Human1 vs Human2 -\/ H2 win) \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{TicTacToe__test_8cpp_ad1ceede656ce5fe580f01a3d7be6e94f}\label{TicTacToe__test_8cpp_ad1ceede656ce5fe580f01a3d7be6e94f}} 
 \mbox{\hyperlink{TicTacToe__test_8cpp_ad1ceede656ce5fe580f01a3d7be6e94f}{T\+E\+ST}} (\mbox{\hyperlink{classTicTacToe}{Tic\+Tac\+Toe}}, start\+Game\+Test6)
-\begin{DoxyCompactList}\small\item\em Test case for start\+Game function. (Human1 vs Human2 -\/ Draw) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Test case for start\+Game function. (Human1 vs Human2 -\/ Draw) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{TicTacToe__test_8cpp_a5bc8a321e494e0f7022840bf6e45806e}\label{TicTacToe__test_8cpp_a5bc8a321e494e0f7022840bf6e45806e}} 
+\mbox{\hyperlink{TicTacToe__test_8cpp_a5bc8a321e494e0f7022840bf6e45806e}{T\+E\+ST}} (\mbox{\hyperlink{classTicTacToe}{Tic\+Tac\+Toe}}, start\+Game\+Test7)
+\begin{DoxyCompactList}\small\item\em Test case for start\+Game function. (Human vs AI) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{TicTacToe__test_8cpp_a5dfb6f63a7c777566b3b466779311804}\label{TicTacToe__test_8cpp_a5dfb6f63a7c777566b3b466779311804}} 
+\mbox{\hyperlink{TicTacToe__test_8cpp_a5dfb6f63a7c777566b3b466779311804}{T\+E\+ST}} (\mbox{\hyperlink{classTicTacToe}{Tic\+Tac\+Toe}}, test\+Accuracy\+Test1)
+\begin{DoxyCompactList}\small\item\em Test case for test\+Accuracy function. (Human vs Human -\/ H1 wins) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{TicTacToe__test_8cpp_ae52d8ecc4a4674c90c6ce5f935378f4c}\label{TicTacToe__test_8cpp_ae52d8ecc4a4674c90c6ce5f935378f4c}} 
+\mbox{\hyperlink{TicTacToe__test_8cpp_ae52d8ecc4a4674c90c6ce5f935378f4c}{T\+E\+ST}} (\mbox{\hyperlink{classTicTacToe}{Tic\+Tac\+Toe}}, test\+Accuracy\+Test2)
+\begin{DoxyCompactList}\small\item\em Test case for test\+Accuracy function. (Human1 vs Human2 -\/ Draw) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{TicTacToe__test_8cpp_af6b718182393d40c2adc4dab68c42398}\label{TicTacToe__test_8cpp_af6b718182393d40c2adc4dab68c42398}} 
+\mbox{\hyperlink{TicTacToe__test_8cpp_af6b718182393d40c2adc4dab68c42398}{T\+E\+ST}} (\mbox{\hyperlink{classTicTacToe}{Tic\+Tac\+Toe}}, test\+Accuracy\+Test3)
+\begin{DoxyCompactList}\small\item\em Test case for start\+Game function. (Human1 vs Human2 -\/ H2 win) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{TicTacToe__test_8cpp_a611bdb09ca2e598bd16ca308dd32c524}\label{TicTacToe__test_8cpp_a611bdb09ca2e598bd16ca308dd32c524}} 
-std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTicTacToe}{Tic\+Tac\+Toe}} $>$ {\bfseries Tic\+Tac\+Toe\+Test\+Object}
-\end{DoxyCompactItemize}
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTicTacToe}{Tic\+Tac\+Toe}} $>$ \mbox{\hyperlink{TicTacToe__test_8cpp_a611bdb09ca2e598bd16ca308dd32c524}{Tic\+Tac\+Toe\+Test\+Object}}
+\begin{DoxyCompactList}\small\item\em Shared pointer object of this class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Coding challenge by Plus One Robotics. 
+This is a \mbox{\hyperlink{classTicTacToe}{Tic\+Tac\+Toe}} class test file. Test cases are written to ensure the implementation is correct. All test cases must pass. If any test case fails, please correct the corresponding function definition. 
 
 \begin{DoxyCopyright}{Copyright}
 M\+IT License 2019 Ajeet Wankhede
@@ -68,7 +83,5 @@ Ajeet Wankhede
 06/11/2019 
 \end{DoxyDate}
 \begin{DoxyVersion}{Version}
-1.\+0
+1.\+0 
 \end{DoxyVersion}
-\hypertarget{TicTacToe__test_8cpp_DESCRIPTION}{}\subsection{D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}\label{TicTacToe__test_8cpp_DESCRIPTION}
-This is a \mbox{\hyperlink{classTicTacToe}{Tic\+Tac\+Toe}} class test file. Test cases are written to ensure the implementation is correct. All test cases must pass. If any test case fails, please correct the corresponding function definition. 

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['board',['Board',['../classBoard.html#a9ee491d4fea680cf69b033374a9fdfcb',1,'Board']]]
+  ['addkey',['addKey',['../classQLearning.html#ad87221dd6ac78bca0960e4a367774745',1,'QLearning']]],
+  ['aiplayer',['AIPlayer',['../classAIPlayer.html#ae791562645a443fead734b4bdcb1509e',1,'AIPlayer']]]
 ];
