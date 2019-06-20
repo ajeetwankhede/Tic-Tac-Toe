@@ -25,21 +25,17 @@
  *  @date    06/11/2019
  *  @version 1.0
  *
- *  @brief Coding challenge by Plus One Robotics
- *
- *  @section DESCRIPTION
+ *  @brief
  *  This is a TicTacToe class source file.
- *  This class is used to initialize the board and start the game.
+ *  This class is used basically to initialize the board and start the game.
  *  Also, the type of player is selected here.
- *  The total number of games are counted.
+ *
  */
 
 #include "TicTacToe.hpp"
 #include <iostream>
 #include <string>
 #include "Board.hpp"
-#include "HumanPlayer.hpp"
-#include "RandomPlayer.hpp"
 #include "Player.hpp"
 
 using std::cout;
@@ -48,7 +44,6 @@ using std::cin;
 using std::string;
 
 TicTacToe::~TicTacToe() {
-  // Auto-generated destructor stub
 }
 
 bool TicTacToe::continueGame() {
@@ -61,23 +56,29 @@ bool TicTacToe::continueGame() {
 }
 
 void TicTacToe::startGame(Board *b, Player *p1, Player *p2) {
-  cout << "********" << p1->getName() << " vs " << p2->getName() << "********"
-       << endl;
-  // Start the while loop for the game
-  cout << b->drawBoard();
+  if (!testing) {
+    cout << "********" << p1->getName() << " vs " << p2->getName() << "********"
+         << endl;
+    cout << b->drawBoard();
+  }
   b->clearBoard();
+  countGames = 0;
+  // Start the while loop for the game
   while (continueGame()) {
     // Find & Print the valid moves
     p1->findValidMoves(b->getEBoard());
     // Enter move
     int move;
+    p1->player = b->getMarker();
     move = p1->input();
     // Update the board
     b->updateBoard(move);
     countGames++;
     // Check for win
     if (b->isWin()) {
-      cout << p1->getName() << " wins!" << endl;
+      if (!testing) {
+        cout << p1->getName() << " wins!" << endl;
+      }
       return;
     } else if (continueGame()) {
       // Toggle the marker
@@ -85,19 +86,49 @@ void TicTacToe::startGame(Board *b, Player *p1, Player *p2) {
       // Find & Print the valid moves
       p2->findValidMoves(b->getEBoard());
       // Enter move
+      p2->player = b->getMarker();
       move = p2->input();
       // Update the board
       b->updateBoard(move);
       countGames++;
       // Check for win
       if (b->isWin()) {
-        cout << p2->getName() << " wins!" << endl;
+        if (!testing) {
+          cout << p2->getName() << " wins!" << endl;
+        }
         return;
       }
       // Toggle the marker
       b->toggleMarker();
     }
   }
-  // Match is a Draw
-  cout << "Match is a draw." << endl;
+  if (!testing) {
+    // Match is a Draw
+    cout << "Match is a draw." << endl;
+  }
+}
+
+void TicTacToe::testAccuracy(Board *b, Player *p1, Player *p2) {
+  win = 0;
+  draw = 0;
+  int test = 0;
+  b->testing = true;
+  testing = true;
+  p1->testing = true;
+  p2->testing = true;
+  while (test < tests) {
+    startGame(b, p1, p2);
+    b->setMarker('X');
+    if (b->isWin()) {
+      win++;
+    } else if (countGames == 9) {
+      draw++;
+    }
+    test++;
+  }
+  if (testing) {
+    cout << "Wins: " << win / 10.0 << "%" << endl;
+    cout << "Draws: " << draw / 10.0 << "%" << endl;
+    cout << "Loses: " << (tests - win - draw) * tests / 100.0 << "%" << endl;
+  }
 }

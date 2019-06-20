@@ -25,13 +25,11 @@
  *  @date    06/11/2019
  *  @version 1.0
  *
- *  @brief Coding challenge by Plus One Robotics
- *
- *  @section DESCRIPTION
+ *  @brief
  *  This is a Board class source file.
  *  This class is used to operate upon the board for Tic Tac Toe game.
- *  The current state of the board should be updated every iteration.
- *  Utility functions such as draw, clear, update, and check win are provided.
+ *  Utility functions such as draw, clear, toggle, update, and check win are provided.
+ *
  */
 
 #include "Board.hpp"
@@ -44,7 +42,6 @@ using std::endl;
 using std::string;
 
 Board::~Board() {
-  // Auto-generated destructor stub
 }
 
 string Board::drawBoard() {
@@ -71,7 +68,9 @@ void Board::clearBoard() {
 void Board::updateBoard(int pos) {
   // Update the board at the position with current marker
   board[pos - 1] = getMarker();
-  cout << drawBoard();
+  if (!testing) {
+    cout << drawBoard();
+  }
 }
 
 void Board::toggleMarker() {

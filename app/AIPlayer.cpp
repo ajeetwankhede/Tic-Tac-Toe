@@ -20,33 +20,26 @@
 
 /**
  *  @copyright MIT License 2019 Ajeet Wankhede
- *  @file    HumanPlayer.cpp
+ *  @file    AIPlayer.cpp
  *  @author  Ajeet Wankhede
- *  @date    06/11/2019
+ *  @date    06/17/2019
  *  @version 1.0
  *
  *  @brief
- *  This is a HumanPlayer class source file.
- *  This class is be used to input a move by human.
+ *  This is a AIPlayer class source file.
+ *  This class is be used to pick a move by AI agent.
  *
  */
 
-#include "HumanPlayer.hpp"
-#include <iostream>
+#include "AIPlayer.hpp"
 
-HumanPlayer::HumanPlayer() {
+AIPlayer::AIPlayer() {
 }
 
-HumanPlayer::~HumanPlayer() {
+AIPlayer::~AIPlayer() {
 }
 
-int HumanPlayer::input() {
-  // Ask the user for a move
-  int pos;
-  std::cout << "Enter your move " << getName() << ": " << std::endl;
-  std::cin >> pos;
-  while (!checkMove(pos)) {
-    std::cin >> pos;
-  }
-  return pos;
+int AIPlayer::input() {
+  setEpsilon(-1.0);
+  return chooseAction(currentBoard + player);
 }

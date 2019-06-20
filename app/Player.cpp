@@ -25,12 +25,11 @@
  *  @date    06/11/2019
  *  @version 1.0
  *
- *  @brief Coding challenge by Plus One Robotics
- *
- *  @section DESCRIPTION
+ *  @brief
  *  This is a Player class source file.
- *  This class is be used find the valid moves in the game.
- *  These will be helpful for the players to choose a valid move.
+ *  This class is be used find the valid moves in the game and to display them.
+ *  These will be helpful for the players to choose and validate a valid move.
+ *
  */
 
 #include "Player.hpp"
@@ -44,17 +43,12 @@ using std::cout;
 using std::endl;
 using std::string;
 
-Player::Player() {
-  // Auto-generated constructor stub
-}
-
 Player::~Player() {
-  // Auto-generated destructor stub
 }
 
 void Player::findValidMoves(string board) {
   // Find the moves which are left to be played and
-  // store the positions in validMoves
+  // store the positions in validMoves vector
   validMoves.clear();
   currentBoard = board;
   for (int i = 1; i <= 9; i++) {
@@ -62,7 +56,10 @@ void Player::findValidMoves(string board) {
       validMoves.push_back(i);
     }
   }
-  cout << displayValidMoves();
+  if (!testing) {
+    // Display valid moves
+    cout << displayValidMoves();
+  }
 }
 
 string Player::displayValidMoves() {
@@ -84,10 +81,14 @@ string Player::displayValidMoves() {
 bool Player::checkMove(int pos) {
   // Validate the move for the player
   if (pos < 1 || pos > 9) {
-    cout << "Move should be between 1-9 inclusive." << endl;
+    if (!testing) {
+      cout << "Move should be between 1-9 inclusive." << endl;
+    }
     return false;
   } else if (currentBoard[pos - 1] != ' ') {
-    cout << "Position already occupied. Enter again." << endl;
+    if (!testing) {
+      cout << "Position already occupied. Enter again." << endl;
+    }
     return false;
   }
   return true;

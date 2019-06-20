@@ -25,20 +25,21 @@
  *  @date    06/11/2019
  *  @version 1.0
  *
- *  @brief Coding challenge by Plus One Robotics
- *
- *  @section DESCRIPTION
+ *  @brief
  *  This is the main file.
- *  Object of class TicTacToe is created and startGame() is called.
+ *  User is asked to choose the type of game he/she wants to play.
+ *
+ *  @section DESCRIPTION Coding challenge by Plus One Robotics
  */
 
 #include <iostream>
-#include <string>
 #include "TicTacToe.hpp"
 #include "Board.hpp"
 #include "HumanPlayer.hpp"
 #include "RandomPlayer.hpp"
 #include "Player.hpp"
+#include "AIPlayer.hpp"
+#include "QLearning.hpp"
 
 using std::cout;
 using std::cin;
@@ -49,31 +50,26 @@ int main() {
   int choice;
   char play = 'Y';
   while (play == 'Y' || play == 'y') {
-    cout
-        << "Choose type of game you want to play:\n"
+    cout << "Choose type of game you want to play:\n"
          << "1. Human vs Human\n"
-         << "2. Human vs Computer\n" << "3. Computer vs Computer"
-        << endl;
+         << "2. Human vs Random\n" << "3. Human vs AI\n"
+         << "4. Train & Test AI"
+         << endl;
     cin >> choice;
-    while (choice != 1 && choice != 2 && choice != 3) {
+    while (choice < 1 || choice > 4) {
       cout << "Please enter a valid choice: " << endl;
       cin >> choice;
     }
     TicTacToe T;
     Board B;
     Player *p1, *p2;
-    std::string name;
     switch (choice) {
       case 1: {
         HumanPlayer hp1, hp2;
         p1 = &hp1;
         p2 = &hp2;
-        cout << "Enter player1 name: " << endl;
-        cin >> name;
-        p1->setName(name);
-        cout << "Enter player2 name: " << endl;
-        cin >> name;
-        p2->setName(name);
+        p1->setName("Player1");
+        p2->setName("Player2");
         T.startGame(&B, p1, p2);
         break;
       }
@@ -82,20 +78,32 @@ int main() {
         RandomPlayer rp;
         p1 = &hp;
         p2 = &rp;
-        cout << "Enter player name: " << endl;
-        cin >> name;
-        p1->setName(name);
+        p1->setName("Player1");
         p2->setName("Random");
         T.startGame(&B, p1, p2);
         break;
       }
       case 3: {
-        RandomPlayer rp1, rp2;
-        p1 = &rp1;
-        p2 = &rp2;
-        p1->setName("Random1");
-        p2->setName("Random2");
+        HumanPlayer hp;
+        AIPlayer AI;
+        AI.loadQtable();
+        p1 = &hp;
+        p2 = &AI;
+        p1->setName("Player1");
+        p2->setName("AI");
         T.startGame(&B, p1, p2);
+        break;
+      }
+      case 4: {
+        QLearning Q;
+        Q.train();
+        AIPlayer AI;
+        AI.loadQtable();
+        RandomPlayer rp;
+        p1 = &AI;
+        p2 = &rp;
+        cout << "AI vs Random accuracy test\n";
+        T.testAccuracy(&B, p1, p2);
         break;
       }
     }

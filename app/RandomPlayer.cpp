@@ -25,25 +25,20 @@
  *  @date    06/11/2019
  *  @version 1.0
  *
- *  @brief Coding challenge by Plus One Robotics
- *
- *  @section DESCRIPTION
+ *  @brief
  *  This is a RandomPlayer class source file.
  *  This class is be used to input a move randomly.
+ *
  */
 
 #include "RandomPlayer.hpp"
-#include <iostream>
-#include <vector>
-#include <utility>
+// #include <iostream>
 #include <random>
 
 RandomPlayer::RandomPlayer() {
-  // Auto-generated constructor stub
 }
 
 RandomPlayer::~RandomPlayer() {
-  // Auto-generated destructor stub
 }
 
 int RandomPlayer::input() {
@@ -52,7 +47,7 @@ int RandomPlayer::input() {
   std::mt19937 rng(rd());
   std::uniform_int_distribution<> dist(0, validMoves.size() - 1);
   int index = dist(rng);
-  std::cout << "Move chosen by " << getName() << ": " << validMoves[index]
-            << std::endl;
+  // std::cout << "Move chosen by " << getName() << ": " << validMoves[index]
+  //          << std::endl;
   return validMoves[index];
 }
