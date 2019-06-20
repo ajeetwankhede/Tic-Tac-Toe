@@ -8,12 +8,16 @@ add_executable(
     Player_test.cpp
     RandomPlayer_test.cpp
     TicTacToe_test.cpp
+    AIPlayer_test.cpp
+    QLearning_test.cpp
     
     ../app/Board.cpp
     ../app/HumanPlayer.cpp
     ../app/Player.cpp
     ../app/RandomPlayer.cpp
     ../app/TicTacToe.cpp
+    ../app/AIPlayer.cpp
+    ../app/QLearning.cpp
 )
 
 target_include_directories(cpp-test PUBLIC ../vendor/googletest/googletest/include ../vendor/googletest/googlemock/include

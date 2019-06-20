@@ -25,17 +25,16 @@
  *  @date    06/11/2019
  *  @version 1.0
  *
- *  @brief Coding challenge by Plus One Robotics
- *
- *  @section DESCRIPTION
+ *  @brief
  *  This is a HumanPlayer class test file.
  *  Test cases are written to ensure the implementation is correct. All test cases must pass.
  *  If any test case fails, please correct the corresponding function definition.
+ *
  */
 
-#include "HumanPlayer.hpp"
-#include <gtest/gtest.h>
-#include <string>
+// #include "HumanPlayer.hpp"
+// #include <gtest/gtest.h>
+// #include <string>
 
 /**
  * @brief Test case for inputTest function

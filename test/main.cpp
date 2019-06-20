@@ -25,11 +25,9 @@
  *  @date    06/11/2019
  *  @version 1.0
  *
- *  @brief Coding challenge by Plus One Robotics
+ *  @brief  *  This is the main file for test.
+ *  Tests are initialized and RUN_ALL_TESTES() is called.
  *
- *  @section DESCRIPTION
- *  This is the main file for test.
- *  Tests are initialized and RUN_ALL_TESTES() is called
  */
 
 #include <gtest/gtest.h>

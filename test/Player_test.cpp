@@ -25,12 +25,11 @@
  *  @date    06/11/2019
  *  @version 1.0
  *
- *  @brief Coding challenge by Plus One Robotics
- *
- *  @section DESCRIPTION
+ *  @brief
  *  This is a Player class test file.
  *  Test cases are written to ensure the implementation is correct. All test cases must pass.
  *  If any test case fails, please correct the corresponding function definition.
+ *
  */
 
 #include "Player.hpp"
@@ -40,8 +39,12 @@
 #include <memory>
 #include <sstream>
 
-std::shared_ptr<Player> PlayerTestObject;
 using std::string;
+
+/**
+ * @brief Shared pointer object of this class
+ */
+std::shared_ptr<Player> PlayerTestObject;
 
 /**
  * @brief Test case for findValidMoves function.
@@ -49,6 +52,7 @@ using std::string;
 TEST(Player, findValidMovesTest) {
   // Assign value to the shared pointer to the object
   PlayerTestObject = std::make_shared<Player>();
+  PlayerTestObject->testing = true;
   // Write possible states of the board
   string board = "  tt t  t";
   // Find the valid moves
@@ -66,11 +70,12 @@ TEST(Player, findValidMovesTest) {
 }
 
 /**
- * @brief Test case for displayValidMoves function.
+ * @brief Test case for displayValidMoves function with there are valid moves.
  */
 TEST(Player, displayValidMovesTest1) {
   // Assign value to the shared pointer to the object
   PlayerTestObject = std::make_shared<Player>();
+  PlayerTestObject->testing = true;
   std::stringstream ss;
   PlayerTestObject->validMoves.push_back(1);
   ss << "Moves remaining: 1" << std::endl;
@@ -78,11 +83,12 @@ TEST(Player, displayValidMovesTest1) {
 }
 
 /**
- * @brief Test case for displayValidMoves function.
+ * @brief Test case for displayValidMoves function when there are no valid moves.
  */
 TEST(Player, displayValidMovesTest2) {
   // Assign value to the shared pointer to the object
   PlayerTestObject = std::make_shared<Player>();
+  PlayerTestObject->testing = true;
   std::stringstream ss;
   PlayerTestObject->validMoves.clear();
   ss << "No moves left." << std::endl;
@@ -90,11 +96,12 @@ TEST(Player, displayValidMovesTest2) {
 }
 
 /**
- * @brief Test case for checkMove function.
+ * @brief Test case for checkMove function when moves are within range 1-9.
  */
 TEST(Player, checkMoveTest1) {
   // Assign value to the shared pointer to the object
   PlayerTestObject = std::make_shared<Player>();
+  PlayerTestObject->testing = true;
   // Assign a state to the board
   string board = "  tt t  t";
   PlayerTestObject->currentBoard = board;
@@ -110,11 +117,12 @@ TEST(Player, checkMoveTest1) {
 }
 
 /**
- * @brief Test case for checkMove function.
+ * @brief Test case for checkMove function when moves are outside range 1-9.
  */
 TEST(Player, checkMoveTest2) {
   // Assign value to the shared pointer to the object
   PlayerTestObject = std::make_shared<Player>();
+  PlayerTestObject->testing = true;
   // Assign a state to the board
   string board = "  tt t  t";
   PlayerTestObject->currentBoard = board;
@@ -128,5 +136,6 @@ TEST(Player, checkMoveTest2) {
 TEST(Player, inputTest) {
   // Assign value to the shared pointer to the object
   PlayerTestObject = std::make_shared<Player>();
+  PlayerTestObject->testing = true;
   EXPECT_TRUE(PlayerTestObject->input());
 }

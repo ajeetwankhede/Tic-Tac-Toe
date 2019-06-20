@@ -25,17 +25,15 @@
  *  @date    06/11/2019
  *  @version 1.0
  *
- *  @brief Coding challenge by Plus One Robotics
- *
- *  @section DESCRIPTION
+ *  @brief
  *  This is a RandomPlayer class test file.
  *  Test cases are written to ensure the implementation is correct. All test cases must pass.
  *  If any test case fails, please correct the corresponding function definition.
+ *
  */
 
 #include "RandomPlayer.hpp"
 #include <gtest/gtest.h>
-#include <vector>
 
 /**
  * @brief Test case for input function.

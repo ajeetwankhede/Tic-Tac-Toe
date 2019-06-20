@@ -25,12 +25,11 @@
  *  @date    06/11/2019
  *  @version 1.0
  *
- *  @brief Coding challenge by Plus One Robotics.
- *
- *  @section DESCRIPTION
+ *  @brief
  *  This is a Board class test file.
  *  Test cases are written to ensure the implementation is correct. All test cases must pass.
  *  If any test case fails, please correct the corresponding function definition.
+ *
  */
 
 #include "Board.hpp"
@@ -39,9 +38,13 @@
 #include <string>
 #include <sstream>
 
-std::shared_ptr<Board> BoardTestObject;
 using std::string;
 using std::endl;
+
+/**
+ * @brief Shared pointer object of this class
+ */
+std::shared_ptr<Board> BoardTestObject;
 
 /**
  * @brief Test case for clearBoard function.
@@ -62,9 +65,11 @@ TEST(Board, clearBoardTest) {
 TEST(Board, drawBoardTest) {
   // Assign value to the shared pointer to the object
   BoardTestObject = std::make_shared<Board>();
+  // Set the board to empty spaces
   string e(9, ' ');
   BoardTestObject->setBoard(e);
   std::stringstream ss;
+  // Create a stream object to store the style of displaying the board
   ss << endl;
   for (int i = 1; i <= 9; i = i + 3) {
     ss << " " << BoardTestObject->getBoard(i) << " | "
@@ -75,6 +80,7 @@ TEST(Board, drawBoardTest) {
     }
   }
   ss << endl;
+  // Verify if the drawing styles match
   EXPECT_EQ(ss.str(), BoardTestObject->drawBoard());
 }
 
@@ -84,6 +90,7 @@ TEST(Board, drawBoardTest) {
 TEST(Board, updateBoardTest) {
   // Assign value to the shared pointer to the object
   BoardTestObject = std::make_shared<Board>();
+  BoardTestObject->testing = true;
   // Make all the cells of board blank
   string board(9, ' ');
   BoardTestObject->setBoard(board);
@@ -120,7 +127,7 @@ TEST(Board, toggleMarkerTest) {
 }
 
 /**
- * @brief Test case for isWin function
+ * @brief Test case for isWin function when there is a win
  */
 TEST(Board, isWinTest1) {
   // Assign value to the shared pointer to the object
@@ -154,7 +161,7 @@ TEST(Board, isWinTest1) {
 }
 
 /**
- * @brief Test case for isWin function
+ * @brief Test case for isWin function when there is no win
  */
 TEST(Board, isWinTest2) {
   // Assign value to the shared pointer to the object
