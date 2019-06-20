@@ -25,12 +25,10 @@
  *  @date    06/11/2019
  *  @version 1.0
  *
- *  @brief Coding challenge by Plus One Robotics
- *
- *  @section DESCRIPTION
+ *  @brief
  *  This is a HumanPlayer class header file.
  *  This class is be used to input a move by human.
- *  The name of the player is also stored.
+ *
  */
 
 #ifndef INCLUDE_HUMANPLAYER_HPP_
@@ -42,23 +40,15 @@ class HumanPlayer : public Player {
  public:
   /**
    *   @brief Default constructor for HumanPlayer.
-   *
-   *   @param nothing
-   *   @return nothing
    */
   HumanPlayer();
   /**
    *   @brief Default destructor for HumanPlayer.
-   *
-   *   @param nothing
-   *   @return nothing
    */
   virtual ~HumanPlayer();
   /**
    *   @brief Asks the player to enter the move position.
-   *
-   *   @param nothing
-   *   @return int value of the position on the board.
+   *   @return The chosen move.
    */
   int input();
 };

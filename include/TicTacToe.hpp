@@ -25,13 +25,11 @@
  *  @date    06/11/2019
  *  @version 1.0
  *
- *  @brief Coding challenge by Plus One Robotics
- *
- *  @section DESCRIPTION
+ *  @brief
  *  This is a TicTacToe class header file.
- *  This class is used to initialize the board and start the game.
+ *  This class is basically used to initialize the board and start the game.
  *  Also, the type of player is selected here.
- *  The total number of games are counted.
+ *
  */
 
 #ifndef INCLUDE_TICTACTOE_HPP_
@@ -39,42 +37,62 @@
 
 #include "Player.hpp"
 #include "Board.hpp"
-#include "HumanPlayer.hpp"
-#include "RandomPlayer.hpp"
 
 class TicTacToe {
  public:
-  int countGames;
   /**
    *   @brief Default constructor for TicTacToe.
-   *
-   *   @param nothing
-   *   @return nothing
    */
   TicTacToe()
-      : countGames(0) {
+      : countGames(0),
+        testing(false),
+        win(0),
+        draw(0),
+        tests(1000) {
   }
   /**
    *   @brief Default constructor for TicTacToe.
-   *
-   *   @param nothing
-   *   @return nothing
    */
   virtual ~TicTacToe();
   /**
    *   @brief Begins the game loop.
-   *
-   *   @param Board object, Player object pointer, Player object pointer
-   *   @return nothing
+   *   @param b Board object pointer
+   *   @param p1 Player1 object pointer
+   *   @param p2 Player2 object pointer
    */
   void startGame(Board *b, Player *p1, Player *p2);
   /**
    *   @brief Tells if game is completed.
-   *
-   *   @param nothing
-   *   @return bool value, true if continue else false to stop the game
+   *   @return True if continue else false to stop the game
    */
   bool continueGame();
+  /**
+   *   @brief Tests the accuracy of the player 1 against player 2
+   *   @param b Board object pointer
+   *   @param p1 Player1 object pointer
+   *   @param p2 Player2 object pointer
+   */
+  void testAccuracy(Board *b, Player *p1, Player *p2);
+  /**
+   *   @brief Counts the number of steps taken in a game
+   */
+  int countGames;
+  /**
+   *   @brief true if testing else false
+   */
+  bool testing;
+  /**
+   *   @brief Stores the number of wins to find accuracy
+   */
+  int win;
+  /**
+   *   @brief Stores the number of draws to find accuracy
+   */
+  int draw;
+  /**
+   *   @brief Number of games to played for testing.
+   */
+  int tests;
 };
 
 #endif  // INCLUDE_TICTACTOE_HPP_

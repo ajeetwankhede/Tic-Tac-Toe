@@ -20,37 +20,38 @@
 
 /**
  *  @copyright MIT License 2019 Ajeet Wankhede
- *  @file    RandomPlayer.hpp
+ *  @file    AIPlayer.hpp
  *  @author  Ajeet Wankhede
- *  @date    06/11/2019
+ *  @date    06/17/2019
  *  @version 1.0
  *
  *  @brief
- *  This is a RandomPlayer class header file.
- *  This class is be used to chose a move randomly.
+ *  This is a AIPlayer class header file.
+ *  This class is be used to pick a move by AI agent.
  *
  */
 
-#ifndef INCLUDE_RANDOMPLAYER_HPP_
-#define INCLUDE_RANDOMPLAYER_HPP_
+#ifndef INCLUDE_AIPLAYER_HPP_
+#define INCLUDE_AIPLAYER_HPP_
 
 #include "Player.hpp"
+#include "QLearning.hpp"
 
-class RandomPlayer : public Player {
+class AIPlayer : public Player, public QLearning {
  public:
   /**
-   *   @brief Default constructor for RandomPlayer.
+   *   @brief Default constructor for AIPlayer.
    */
-  RandomPlayer();
+  AIPlayer();
   /**
-   *   @brief Default destructor for RandomPlayer.
+   *   @brief Default destructor for AIPlayer.
    */
-  virtual ~RandomPlayer();
+  virtual ~AIPlayer();
   /**
-   *   @brief Chooses a random move from the moves left.
+   *   @brief Chooses a move by the AI.
    *   @return The chosen move.
    */
   int input();
 };
 
-#endif  // INCLUDE_RANDOMPLAYER_HPP_
+#endif  // INCLUDE_AIPLAYER_HPP_

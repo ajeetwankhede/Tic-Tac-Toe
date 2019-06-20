@@ -25,12 +25,11 @@
  *  @date    06/11/2019
  *  @version 1.0
  *
- *  @brief Coding challenge by Plus One Robotics
+ *  @brief
+ *   *  This is a Player class header file.
+ *  This class is be used find the valid moves in the game and to display them.
+ *  These will be helpful for the players to choose and validate a valid move.
  *
- *  @section DESCRIPTION
- *  This is a Player class header file.
- *  This class is be used find the valid moves in the game.
- *  These will be helpful for the players to choose a valid move.
  */
 
 #ifndef INCLUDE_PLAYER_HPP_
@@ -45,63 +44,62 @@ class Player {
  public:
   /**
    *   @brief Default constructor for Player.
-   *
-   *   @param nothing
-   *   @return nothing
    */
-  Player();
+  Player()
+      : testing(false),
+        player('X') {
+  }
   /**
    *   @brief Default destructor for Player.
-   *
-   *   @param nothing
-   *   @return nothing
    */
   virtual ~Player();
   /**
    *   @brief Finds the moves available for the player.
-   *
-   *   @param string of 3x3 stating the current board values.
-   *   @return nothing
+   *   @param board a string of current board
    */
   void findValidMoves(std::string board);
   /**
    *   @brief Prints the moves available for the player.
-   *
-   *   @param nothing
-   *   @return string value of valid moves if any
+   *   @return string containing valid moves
    */
   std::string displayValidMoves();
   /**
    *   @brief Validates the move for the player.
-   *
-   *   @param int value of position.
-   *   @return bool value, returns true if valid move else false
+   *   @param pos an integer on the board
+   *   @return True if valid move else false
    */
   bool checkMove(int pos);
   /**
    *   @brief Set the name of the player
-   *
-   *   @param string value of name
-   *   @return nothing
+   *   @param s a string value of name
    */
   void setName(std::string s);
   /**
    *   @brief Get the name of the player
-   *
-   *   @param nothing
-   *   @return string value of name
+   *   @return Value of name
    */
   std::string getName();
   /**
    *   @brief Chooses a position.
-   *
-   *   @param nothing
-   *   @return int value of the chosen position.
+   *   @return The chosen position.
    */
   virtual int input();
-
+  /**
+   *   @brief Stores the state of board
+   */
   std::string currentBoard;
+  /**
+   *   @brief Stores the valid moves
+   */
   std::vector<int> validMoves;
+  /**
+   *   @brief Stores the marker of player
+   */
+  char player;
+  /**
+   *   @brief true if testing else false
+   */
+  bool testing;
 };
 
 #endif  // INCLUDE_PLAYER_HPP_

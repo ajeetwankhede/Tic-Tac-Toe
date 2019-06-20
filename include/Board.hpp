@@ -25,13 +25,11 @@
  *  @date    06/11/2019
  *  @version 1.0
  *
- *  @brief Coding challenge by Plus One Robotics
- *
- *  @section DESCRIPTION
+ *  @brief
  *  This is a Board class header file.
  *  This class is used to operate upon the board for Tic Tac Toe game.
- *  The current state of the board should be updated every iteration.
- *  Utility functions such as draw, clear, update, and check win are provided.
+ *  Utility functions such as draw, clear, toggle, update, and check win are provided.
+ *
  */
 
 #ifndef INCLUDE_BOARD_HPP_
@@ -40,97 +38,81 @@
 #include <string>
 
 class Board {
+  /**
+   *   @brief Stores the board state
+   */
   std::string board;
+  /**
+   *   @brief Stores the marker
+   */
   char marker;
 
  public:
   /**
    *   @brief Default constructor for Board.
-   *
-   *   @param nothing
-   *   @return nothing
    */
   Board()
       : board("123456789"),
-        marker('X') {
+        marker('X'),
+        testing(false) {
   }
   /**
    *   @brief Default destructor for Board.
-   *
-   *   @param nothing
-   *   @return nothing
    */
   virtual ~Board();
   /**
    *   @brief Displays the current board on the screen.
-   *
-   *   @param nothing
-   *   @return string value for printing the board
+   *   @return String for printing the board
    */
   std::string drawBoard();
   /**
-   *   @brief Clears all the contents of board and fill it with blanks.
-   *
-   *   @param nothing
-   *   @return nothing
+   *   @brief Clears all the contents of board and fills with blanks.
    */
   void clearBoard();
   /**
    *   @brief Fills the position on the board with the marker.
-   *
-   *   @param int value stating the position to fill.
-   *   @return nothing
+   *   @param pos am integer stating the position to fill.
    */
   virtual void updateBoard(int pos);
   /**
    *   @brief Toggles the value in the marker between 'X' & 'O'.
-   *
-   *   @param nothing
-   *   @return nothing
    */
   virtual void toggleMarker();
   /**
    *   @brief Checks all the conditions of winning the game.
-   *
-   *   @param nothing
-   *   @return bool value true if player wins, else returns false.
+   *   @return True if player wins, else returns false.
    */
   virtual bool isWin();
   /**
-   *   @brief Set the entire the board
-   *
-   *   @param string of new board
-   *   @return nothing
+   *   @brief Set the entire board with the given string
+   *   @param b a string of new board
    */
   void setBoard(std::string b);
   /**
    *   @brief Get the state of the board
-   *
-   *   @param int value of pos on the board
-   *   @return char value at pos on the board
+   *   @param pos an integer of move on the board
+   *   @return Mark at the pos on the board
    */
   char getBoard(const int pos);
   /**
    *   @brief Get the entire board
-   *
-   *   @param nothing
-   *   @return string value of the board
+   *   @return The board
    */
   virtual std::string getEBoard();
   /**
    *   @brief Set the marker
-   *
-   *   @param char value to be set
-   *   @return nothing
+   *   @param c a char value to be set
    */
   void setMarker(const char c);
   /**
    *   @brief Get the marker
-   *
-   *   @param nothing
-   *   @return char value of marker
+   *   @return Marker
    */
   char getMarker();
+  /**
+   *   @brief true if testing else false
+   */
+  bool testing;
 };
 
 #endif  // INCLUDE_BOARD_HPP_
