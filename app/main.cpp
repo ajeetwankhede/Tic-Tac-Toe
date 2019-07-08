@@ -29,7 +29,7 @@
  *  This is the main file.
  *  User is asked to choose the type of game he/she wants to play.
  *
- *  @section DESCRIPTION Coding challenge by Plus One Robotics
+ *  @section DESCRIPTION 
  */
 
 #include <iostream>
